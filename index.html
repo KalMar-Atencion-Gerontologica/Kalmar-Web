@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"
+        content="KalMar Atención Gerontológica — Servicios profesionales de estimulación cognitiva, terapia física y consejería familiar para el bienestar integral del adulto mayor. Lic. Karla Marisol Sanchez Guzman." />
     <title>KalMar Atencion Gerontologica</title>
     <link rel="icon" type="image/png" href="/img/kalmar_logo_favicon.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -73,9 +75,24 @@
             box-shadow: 0 4px 15px -3px rgba(212, 175, 55, 0.15);
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
-        #mobile-menu-toggle:checked ~ #mobile-menu {
+        /* Hamburger → X icon toggle */
+        .close-icon { display: none; }
+        #mobile-menu-toggle:checked ~ div label .menu-icon { display: none; }
+        #mobile-menu-toggle:checked ~ div label .close-icon { display: block; }
+
+        /* Smooth mobile menu slide */
+        #mobile-menu {
             display: flex;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
         }
+        #mobile-menu-toggle:checked ~ #mobile-menu {
+            max-height: 500px;
+            opacity: 1;
+        }
+
         #subscription-modal-toggle:checked ~ #subscription-modal {
             display: flex;
         }
@@ -83,47 +100,6 @@
 </head>
 
 <body class="text-slate-900">
-
-    <!-- ==================== SUBSCRIPTION MODAL ==================== 
-    <input class="hidden" id="subscription-modal-toggle" type="checkbox" />
-    <div class="hidden fixed inset-0 z-[200] items-center justify-center p-4" id="subscription-modal">
-        <label class="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-pointer"
-            for="subscription-modal-toggle"></label>
-        <div
-            class="relative w-full max-w-4xl bg-bone rounded-xl overflow-hidden shadow-2xl border border-gold flex flex-col md:flex-row z-10">
-            <label
-                class="absolute top-4 right-4 z-20 cursor-pointer text-slate-400 hover:text-primary transition-colors"
-                for="subscription-modal-toggle">
-                <span class="material-symbols-outlined text-2xl">close</span>
-            </label>
-            <div class="md:w-1/2 h-48 md:h-auto bg-cover bg-center"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRjWuNVLmf_ILmZqtAguUXMCAgyy_0Yl06BgfRv7M6XiOABcMHVeH_W0GKpd3WmdGH55nIzdsWbZg_28BIIBCKCyNFHe2qffkksrGLETf0Z6P7WvKN1ftWYMwUtw1i1n4DqwEc81Xh4IhJbVOTA3GGj6tSo24NwVnKngUqsYdvaZGgCkXrZvLmzgo2s3bKM5F4OidcjekkeWJT_ib9xnce8DJuaSaJ7Hp7MhEIVTgAn6pMM4CCCrIk1oaAvin-Ua-pPaWavvcNjng");'>
-                <div class="w-full h-full bg-gradient-to-r md:bg-gradient-to-l from-bone/10 to-transparent"></div>
-            </div>
-            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-bone">
-                <span class="text-gold font-semibold tracking-widest uppercase text-xs mb-2 block">Newsletter</span>
-                <h2 class="font-display text-3xl text-primary mb-4 leading-tight">Mantente Informado</h2>
-                <p class="font-montserrat-light text-slate-600 mb-8 leading-relaxed">
-                    Suscríbete a nuestro boletín para recibir consejos sobre el cuidado del adulto mayor y novedades de
-                    KalMar.
-                </p>
-                <form class="space-y-4">
-                    <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold"
-                            for="sub-email">Correo Electrónico</label>
-                        <input
-                            class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-montserrat-light text-slate-900"
-                            id="sub-email" placeholder="tu@email.com" type="email" />
-                    </div>
-                    <button
-                        class="w-full bg-primary text-white font-bold uppercase tracking-widest py-4 rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform"
-                        type="button">
-                        Suscribirme
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div> -->
 
     <!-- ==================== PAGE WRAPPER ==================== -->
     <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
@@ -134,23 +110,32 @@
                 class="fixed top-0 left-0 right-0 z-50 bg-primary-dark shadow-xl border-b border-gold/30 px-6 md:px-20 py-4">
                 <div class="flex items-center justify-between max-w-[1280px] mx-auto">
                     <a class="flex items-center gap-3 text-gold" href="#">
-                        <img src="/img/kalmar_logo_128.png" alt="KalMar Logo" class="h-10 w-auto" />
-                        <!-- <h2 class="text-white text-2xl font-display font-bold leading-tight tracking-tight">KalMar</h2> -->
+                        <img src="/img/kalmar_logo_white_transparent.png" alt="KalMar Logo" class="h-20 w-auto" />
                     </a>
 
                     <!-- Desktop Navigation -->
                     <div class="hidden md:flex flex-1 justify-end gap-10 items-center">
                         <nav class="flex items-center gap-8">
                             <a class="text-bone hover:text-gold transition-colors text-xs font-display font-semibold uppercase tracking-widest"
-                                href="#">Inicio</a>
+                                href="#">
+                                Inicio
+                            </a>
                             <a class="text-bone hover:text-gold transition-colors text-xs font-display font-semibold uppercase tracking-widest"
-                                href="#servicios">Servicios</a>
+                                href="#servicios">
+                                Servicios
+                            </a>
                             <a class="text-bone hover:text-gold transition-colors text-xs font-display font-semibold uppercase tracking-widest"
-                                href="#trayectoria">Sobre Mí</a>
+                                href="#trayectoria">
+                                Sobre Mí
+                            </a>
                             <a class="text-bone hover:text-gold transition-colors text-xs font-display font-semibold uppercase tracking-widest"
-                                href="#blog">Blog</a>
+                                href="#blog">
+                                Blog
+                            </a>
                             <a class="text-bone hover:text-gold transition-colors text-xs font-display font-semibold uppercase tracking-widest"
-                                href="#contacto">Contacto</a>
+                                href="#contacto">
+                                Contacto
+                            </a>
                         </nav>
                         <button
                             class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-gold text-primary-dark text-xs font-bold uppercase tracking-widest hover:bg-bone transition-all shadow-lg">
@@ -162,21 +147,32 @@
                     <div class="md:hidden flex items-center">
                         <input class="hidden peer" id="mobile-menu-toggle" type="checkbox" />
                         <label class="cursor-pointer text-gold p-2" for="mobile-menu-toggle">
-                            <span class="material-symbols-outlined text-4xl">menu</span>
+                            <span class="material-symbols-outlined text-4xl menu-icon">menu</span>
+                            <span class="material-symbols-outlined text-4xl close-icon">close</span>
                         </label>
-                        <div class="hidden absolute top-full left-0 right-0 bg-primary-dark border-b border-gold/20 flex-col p-6 gap-4 shadow-xl"
+                        <div class="absolute top-full left-0 right-0 bg-primary-dark border-b border-gold/20 flex-col p-6 gap-4 shadow-xl"
                             id="mobile-menu">
                             <nav class="flex flex-col gap-4 text-center">
                                 <a class="text-bone hover:text-gold transition-colors text-lg font-display font-bold uppercase"
-                                    href="#">Inicio</a>
+                                    href="#">
+                                    Inicio
+                                </a>
                                 <a class="text-bone hover:text-gold transition-colors text-lg font-display font-bold uppercase"
-                                    href="#servicios">Servicios</a>
+                                    href="#servicios">
+                                    Servicios
+                                </a>
                                 <a class="text-bone hover:text-gold transition-colors text-lg font-display font-bold uppercase"
-                                    href="#trayectoria">Sobre Mí</a>
+                                    href="#trayectoria">
+                                    Sobre Mí
+                                </a>
                                 <a class="text-bone hover:text-gold transition-colors text-lg font-display font-bold uppercase"
-                                    href="#blog">Blog</a>
+                                    href="#blog">
+                                    Blog
+                                </a>
                                 <a class="text-bone hover:text-gold transition-colors text-lg font-display font-bold uppercase"
-                                    href="#contacto">Contacto</a>
+                                    href="#contacto">
+                                    Contacto
+                                </a>
                             </nav>
                         </div>
                     </div>
@@ -198,16 +194,16 @@
                                     class="text-primary-dark text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight">
                                     Dignidad y Cuidado en <span class="italic">Plenitud</span>
                                 </h1>
-                                <p class="text-slate-700 text-lg md:xl font-light leading-relaxed max-w-[540px]">
+                                <p class="text-slate-700 md:text-xl font-light leading-relaxed max-w-[540px]">
                                     Lic. Karla Marisol Sanchez Guzman. Especialista dedicada al bienestar integral y la
                                     estimulación cognitiva del adulto mayor con un enfoque profundamente humano.
                                 </p>
                             </div>
                             <div class="flex flex-wrap gap-4">
-                                <button
-                                    class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-sm font-bold uppercase tracking-widest hover:bg-primary-dark transition-all shadow-md">
+                                <a class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-sm font-bold uppercase tracking-widest hover:bg-primary-dark transition-all shadow-md"
+                                    href="#servicios">
                                     Nuestros Servicios
-                                </button>
+                                </a>
                                 <a class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-full h-14 px-8 border-2 border-primary text-primary text-sm font-bold uppercase tracking-widest hover:bg-primary/5 transition-colors"
                                     href="#trayectoria">
                                     Conoce a Karla
@@ -220,6 +216,8 @@
                                     class="absolute -inset-4 bg-gold/10 rounded-xl transform rotate-3 transition-transform group-hover:rotate-1">
                                 </div>
                                 <div class="relative w-full aspect-[4/5] bg-center bg-cover rounded-xl border-8 border-bone shadow-2xl"
+                                    role="img"
+                                    aria-label="Lic. Karla Marisol Sanchez Guzman, especialista en gerontología"
                                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_6qkpAMpQkWdLV0jT0GrDkNYDWQXcltnMC0mkp1qR8O2eVPBVkU9OVNCgB40u5Hyy-P74tbvkPqM-TBug-F5-IryfSi1z8nxrb_obMVO9HVtp1NA718kOKzgn4SLtST-dIsumythfkWzk4Xwr6UuPbcj0jLdXW-pJzqNq_74Gk_gd7aQG2B3fzszsi1pPxa7QSmj9QmeD6mc-8OI2XIQnnN14KNac-jYXhyPhZ1MLeMoRHQawKRpcEZ1_fM2mKL2Je6y6kcbNrDQ");'>
                                 </div>
                             </div>
@@ -232,8 +230,9 @@
                     <div class="max-w-[1280px] mx-auto px-6">
                         <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                             <div class="max-w-[720px]">
-                                <h2 class="text-primary text-4xl md:text-5xl font-display font-bold mb-6">Excelencia con
-                                    Corazón</h2>
+                                <h2 class="text-primary text-4xl md:text-5xl font-display font-bold mb-6">
+                                    Excelencia con Corazón
+                                </h2>
                                 <div class="h-0.5 w-24 bg-gold mb-6"></div>
                                 <p class="text-slate-600 text-lg font-light leading-relaxed">
                                     Abordamos el envejecimiento como una etapa de crecimiento y adaptación, ofreciendo
@@ -249,15 +248,13 @@
                                     class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
                                     <span class="material-symbols-outlined text-3xl">psychology</span>
                                 </div>
-                                <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">Estimulación Cognitiva
+                                <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">
+                                    Estimulación Cognitiva
                                 </h3>
                                 <p class="text-slate-600 font-light leading-relaxed mb-6">
                                     Programas neuropsicológicos diseñados para fortalecer la memoria, atención y
                                     funciones ejecutivas, previniendo el deterioro cognitivo.
                                 </p>
-                                <a class="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2"
-                                    href="#">Ver detalles <span
-                                        class="material-symbols-outlined text-sm">arrow_forward</span></a>
                             </div>
                             <!-- Service Card 2 -->
                             <div
@@ -266,15 +263,13 @@
                                     class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
                                     <span class="material-symbols-outlined text-3xl">fitness_center</span>
                                 </div>
-                                <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">Terapia Física Senior
+                                <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">
+                                    Terapia Física Senior
                                 </h3>
                                 <p class="text-slate-600 font-light leading-relaxed mb-6">
                                     Ejercicios adaptados para mejorar la movilidad, equilibrio y fuerza muscular,
                                     reduciendo el riesgo de caídas y promoviendo la autonomía.
                                 </p>
-                                <a class="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2"
-                                    href="#">Ver detalles <span
-                                        class="material-symbols-outlined text-sm">arrow_forward</span></a>
                             </div>
                             <!-- Service Card 3 -->
                             <div
@@ -283,14 +278,13 @@
                                     class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
                                     <span class="material-symbols-outlined text-3xl">groups</span>
                                 </div>
-                                <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">Consejería Familiar</h3>
+                                <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">
+                                    Consejería Familiar
+                                </h3>
                                 <p class="text-slate-600 font-light leading-relaxed mb-6">
                                     Orientación profesional para el núcleo familiar, brindando herramientas emocionales
                                     y logísticas para el cuidado del adulto mayor.
                                 </p>
-                                <a class="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2"
-                                    href="#">Ver detalles <span
-                                        class="material-symbols-outlined text-sm">arrow_forward</span></a>
                             </div>
                         </div>
                     </div>
@@ -307,10 +301,11 @@
                                         Mí</span>
                                     <h2
                                         class="text-bone text-4xl md:text-5xl font-display font-bold leading-tight mb-8">
-                                        Trayectoria Profesional</h2>
+                                        Trayectoria Profesional
+                                    </h2>
                                     <div class="space-y-6">
                                         <p class="font-montserrat-light text-bone/90 text-lg leading-relaxed">
-                                            Soy la <strong>Lic. Karla Marisol Sanchez Guzman</strong>, una profesional
+                                            Soy la <em>Lic. Karla Marisol Sanchez Guzman</em>, una profesional
                                             apasionada por el bienestar de nuestros adultos mayores. Con años de
                                             experiencia en el sector salud, he dedicado mi carrera a desarrollar un
                                             enfoque que combina la precisión clínica con una empatía profunda.
@@ -327,18 +322,24 @@
                                         class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
                                         <span class="material-symbols-outlined text-gold">school</span>
                                         <div>
-                                            <h4 class="font-display font-bold text-white text-sm">Gerontología</h4>
-                                            <p class="font-montserrat-light text-xs text-bone/70">Formación
-                                                biopsicosocial.</p>
+                                            <h4 class="font-display font-bold text-white text-sm">
+                                                Gerontología
+                                            </h4>
+                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                                Formación en Terapia Fisica y Estimulacion Cognitiva.
+                                            </p>
                                         </div>
                                     </div>
                                     <div
                                         class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
                                         <span class="material-symbols-outlined text-gold">psychology</span>
                                         <div>
-                                            <h4 class="font-display font-bold text-white text-sm">Salud Mental</h4>
-                                            <p class="font-montserrat-light text-xs text-bone/70">Especialista en
-                                                estimulación.</p>
+                                            <h4 class="font-display font-bold text-white text-sm">
+                                                Salud Mental
+                                            </h4>
+                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                                Especialista en estimulación.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -346,6 +347,7 @@
                             <div class="lg:w-1/2 relative">
                                 <div class="relative z-10 p-4 bg-bone/10 border border-gold/30 shadow-2xl rounded-2xl">
                                     <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-center bg-cover"
+                                        role="img" aria-label="Karla Marisol en su consultorio"
                                         style='background-image: url("/img/ABOUT.png");'>
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent">
@@ -392,7 +394,9 @@
                             <span
                                 class="text-gold font-semibold tracking-[0.2em] uppercase text-sm block mb-4">Experiencias
                                 Reales</span>
-                            <h2 class="text-primary text-4xl md:text-5xl font-display font-bold">Testimonios</h2>
+                            <h2 class="text-primary text-4xl md:text-5xl font-display font-bold">
+                                Testimonios
+                            </h2>
                             <div class="h-0.5 w-24 bg-gold mx-auto mt-6"></div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -409,11 +413,15 @@
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 rounded-full bg-center bg-cover border border-gold/20"
+                                        role="img" aria-label="Foto de Elena Rodríguez"
                                         style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnplOXE8RMosXSXLEdWkGtbMR5IzOiaVkv-s3mayk8UQ-78nnol_wmmd1lc9y6FFd426HABzEp6PZ8dmw9kkC_TtRjR1BmnfluUoxA05xdM6oUNBpOyD6Pa0pdvMuOojjxdnMZRO73xU8ijh5XBFMSjIA5-BEVCfVAwF_xBcFIydY6Ycg_OsMsYXWwHXyz0gEHizaCf6BSGzLzt4FguaOPQwzIapB_KaMvC4XHfxlm5l9tmp35MmTXinVSfTolGeYb_vQY2O4Sc2E");'>
                                     </div>
                                     <div>
-                                        <h4 class="font-display text-sm font-bold text-slate-900">Elena Rodríguez</h4>
-                                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">Hija de paciente
+                                        <h4 class="font-display text-sm font-bold text-slate-900">
+                                            Elena Rodríguez
+                                        </h4>
+                                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                                            Hija de paciente
                                         </p>
                                     </div>
                                 </div>
@@ -431,11 +439,16 @@
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 rounded-full bg-center bg-cover border border-gold/20"
+                                        role="img" aria-label="Foto de Roberto Méndez"
                                         style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzsD4eyohYHnG3O77HN1cSw9GNGbnFZXxSS6uiDwDzkDdPh6O9AnaKPhQrhEkif7RYd4JCCyzh1awpH8nRiluB71Qd5b252sw6PQZiQnSqFGfi2D5IG7-u00FFcYDTEqM_ujxiGi3bvofvJ8oufqPZyv2X-w-uT-QSM-8xoexaND6v0oM6DojUEMBaEXNBGHm2ptotaSnazV4qQzpgv1IljTgyY64vdgiVwj_3GparoNzfcXCs2y4IqL0KusBXGnx5NzWoTe7VCes");'>
                                     </div>
                                     <div>
-                                        <h4 class="font-display text-sm font-bold text-slate-900">Roberto Méndez</h4>
-                                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">Paciente</p>
+                                        <h4 class="font-display text-sm font-bold text-slate-900">
+                                            Roberto Méndez
+                                        </h4>
+                                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                                            Paciente
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -452,11 +465,16 @@
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 rounded-full bg-center bg-cover border border-gold/20"
+                                        role="img" aria-label="Foto de Familia Velázquez"
                                         style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZkEcw6s20xwOkcMPABha6XRyZxybm-hkkWq4jJDf7rNklvD7C6bmHKruNYUbJ93ztP72n9joTeu2wp86wAMo2_1kxFa2dtwGwRdY_74YxmGUZNJeKPzfyNX7uAzlcmv3usX9HXt7rynhN-XgNMwNcDiwAJNqfvY1OSkHVHXUga6Zs2TixVawJPZvenDoKdCx588p-vCxNnXIVHv4JaSVjF3Q0B1xCo6z2tgtmjWpkUz7CXatuTi6dTo8h2MYoyWdMLtZ0Y-gsOz8");'>
                                     </div>
                                     <div>
-                                        <h4 class="font-display text-sm font-bold text-slate-900">Familia Velázquez</h4>
-                                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">Familiares</p>
+                                        <h4 class="font-display text-sm font-bold text-slate-900">
+                                            Familia Velázquez
+                                        </h4>
+                                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">
+                                            Familiares
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -468,14 +486,17 @@
                 <section class="bg-primary-muted/30 py-24 section-divider" id="faq">
                     <div class="max-w-[800px] mx-auto px-6">
                         <div class="text-center mb-16">
-                            <h2 class="text-primary-dark text-4xl font-display font-bold mb-6">Preguntas Frecuentes</h2>
+                            <h2 class="text-primary-dark text-4xl font-display font-bold mb-6">
+                                Preguntas Frecuentes
+                            </h2>
                             <div class="h-0.5 w-20 bg-gold mx-auto mb-4"></div>
                         </div>
                         <div class="space-y-4">
                             <details class="group border-b border-gold/30 pb-4">
                                 <summary class="flex items-center justify-between cursor-pointer py-4">
-                                    <h3 class="font-display text-lg text-primary-dark font-bold pr-8">¿Qué es la
-                                        atención gerontológica?</h3>
+                                    <h3 class="font-display text-lg text-primary-dark font-bold pr-8">
+                                        ¿Qué es la atención gerontológica?
+                                    </h3>
                                     <div class="text-primary">
                                         <span class="material-symbols-outlined plus-icon">add</span>
                                         <span class="material-symbols-outlined minus-icon">remove</span>
@@ -491,8 +512,9 @@
                             </details>
                             <details class="group border-b border-gold/30 pb-4">
                                 <summary class="flex items-center justify-between cursor-pointer py-4">
-                                    <h3 class="font-display text-lg text-primary-dark font-bold pr-8">¿Ofrecen atención
-                                        a domicilio?</h3>
+                                    <h3 class="font-display text-lg text-primary-dark font-bold pr-8">
+                                        ¿Ofrecen atención a domicilio?
+                                    </h3>
                                     <div class="text-primary">
                                         <span class="material-symbols-outlined plus-icon">add</span>
                                         <span class="material-symbols-outlined minus-icon">remove</span>
@@ -514,14 +536,16 @@
                     <div class="max-w-[1280px] mx-auto px-6">
                         <div class="text-center mb-16">
                             <h2 class="text-primary text-4xl md:text-5xl font-display font-bold mb-6">Artículos de
-                                Interés</h2>
+                                Interés
+                            </h2>
                             <div class="h-0.5 w-24 bg-gold mx-auto"></div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <!-- Blog Card 1 -->
                             <article
                                 class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
-                                <div class="aspect-video w-full bg-center bg-cover"
+                                <div class="aspect-video w-full bg-center bg-cover" role="img"
+                                    aria-label="Artículo sobre salud mental y mente activa"
                                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5egoBwQlDega5rhB45UQCadeyEcmKfzZGP1izas7K2MlCzeVC3iGhEW8U2eOIVx2khBapQEZKQRQyZAcOVOKY42BPKvHz-BkqAwbGnSmWtuQgDJ3Hx_xPKltSQI5VZXj_x8xCYyouSWLOWV5vKLm2jMinvWbHVRmSsEmeheiZExIrvBVGgnOFf_S7G629xqqGFYTlzhc_yyiIf93bw3x8PtxbrHyrh9ha19HI0xKiVf8U3CIa1i4bRs7iqAYWR5FpKp2IS7giF6c");'>
                                 </div>
                                 <div class="p-8 flex flex-col h-full">
@@ -529,7 +553,8 @@
                                         Mental</span>
                                     <h3
                                         class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
-                                        Mantener la mente activa</h3>
+                                        Mantener la mente activa
+                                    </h3>
                                     <p class="font-montserrat-light text-slate-600 text-sm leading-relaxed mb-6">
                                         Estrategias prácticas para fortalecer las conexiones neuronales y prevenir el
                                         olvido cotidiano.
@@ -542,7 +567,8 @@
                             <!-- Blog Card 2 -->
                             <article
                                 class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
-                                <div class="aspect-video w-full bg-center bg-cover"
+                                <div class="aspect-video w-full bg-center bg-cover" role="img"
+                                    aria-label="Artículo sobre alimentación consciente"
                                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRjWuNVLmf_ILmZqtAguUXMCAgyy_0Yl06BgfRv7M6XiOABcMHVeH_W0GKpd3WmdGH55nIzdsWbZg_28BIIBCKCyNFHe2qffkksrGLETf0Z6P7WvKN1ftWYMwUtw1i1n4DqwEc81Xh4IhJbVOTA3GGj6tSo24NwVnKngUqsYdvaZGgCkXrZvLmzgo2s3bKM5F4OidcjekkeWJT_ib9xnce8DJuaSaJ7Hp7MhEIVTgAn6pMM4CCCrIk1oaAvin-Ua-pPaWavvcNjng");'>
                                 </div>
                                 <div class="p-8 flex flex-col h-full">
@@ -550,7 +576,8 @@
                                         class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Nutrición</span>
                                     <h3
                                         class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
-                                        Alimentación consciente</h3>
+                                        Alimentación consciente
+                                    </h3>
                                     <p class="font-montserrat-light text-slate-600 text-sm leading-relaxed mb-6">
                                         Guía sobre los nutrientes esenciales para mantener la energía y vitalidad en la
                                         madurez.
@@ -563,7 +590,8 @@
                             <!-- Blog Card 3 -->
                             <article
                                 class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
-                                <div class="aspect-video w-full bg-center bg-cover"
+                                <div class="aspect-video w-full bg-center bg-cover" role="img"
+                                    aria-label="Artículo sobre impacto social y bienestar"
                                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0p9gNUlBE0bP9zemt1aJDUYI4cvz4bds3cG5mXDZlr_Z_RRt8mdNS51bGyHqAa8W7xk5wJzkRNzuGadbh0WBcm2lCAV3hX6Ed_8EXAIMzW7GcNJnoK4z6xN3uQLg4bAles2BRsA1r42VAswstVzvfXlRltAZTBzetpsKpup5uIfLMVF8TIqJvDhW78P-v0dOuTxDEbaEJxwFS0LaPdRe3Uk3Gu7KYOUSora2f-g_90LgzBEJ9TdmF1-PFuxdTUpaY_y3iLL0XxIM");'>
                                 </div>
                                 <div class="p-8 flex flex-col h-full">
@@ -571,7 +599,8 @@
                                         class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Bienestar</span>
                                     <h3
                                         class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
-                                        Impacto Social</h3>
+                                        Impacto Social
+                                    </h3>
                                     <p class="font-montserrat-light text-slate-600 text-sm leading-relaxed mb-6">
                                         La importancia de mantener vínculos sociales para combatir la soledad y mejorar
                                         la calidad de vida.
@@ -588,19 +617,22 @@
                 <!-- ===== CTA SECTION ===== -->
                 <section class="bg-primary py-24 section-divider">
                     <div class="max-w-[960px] mx-auto px-6 text-center text-bone">
-                        <h2 class="text-4xl md:text-5xl font-display font-bold mb-8">¿Buscas el mejor cuidado?</h2>
-                        <p class="text-xl font-light mb-12 opacity-90">Contáctanos hoy para una valoración inicial o
-                            descarga nuestra guía completa.</p>
+                        <h2 class="text-4xl md:text-5xl font-display font-bold mb-8">
+                            ¿Buscas el mejor cuidado?
+                        </h2>
+                        <p class="text-xl font-light mb-12 opacity-90">
+                            Contáctanos hoy para una valoración inicial.
+                        </p>
                         <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                             <a class="min-w-[240px] bg-white text-primary font-bold uppercase tracking-widest px-10 py-5 rounded-full shadow-xl hover:scale-105 transition-transform inline-block text-xs"
                                 href="#contacto">
                                 Solicitar Información
                             </a>
-                            <a class="min-w-[240px] flex items-center justify-center gap-3 bg-transparent border-2 border-bone/50 text-bone font-montserrat-light uppercase tracking-widest px-10 py-[18px] rounded-full hover:bg-white/10 hover:border-bone transition-all text-xs"
+                            <!-- <a class="min-w-[240px] flex items-center justify-center gap-3 bg-transparent border-2 border-bone/50 text-bone font-montserrat-light uppercase tracking-widest px-10 py-[18px] rounded-full hover:bg-white/10 hover:border-bone transition-all text-xs"
                                 download="" href="#">
                                 <span class="material-symbols-outlined text-xl">picture_as_pdf</span>
                                 Catálogo (PDF)
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </section>
@@ -609,10 +641,13 @@
                 <section class="bg-bone py-24 md:py-32" id="contacto">
                     <div class="max-w-[800px] mx-auto px-6">
                         <div class="text-center mb-16">
-                            <h2 class="text-primary text-4xl font-display font-bold mb-6">Contacto Directo</h2>
+                            <h2 class="text-primary text-4xl font-display font-bold mb-6">
+                                Contacto Directo
+                            </h2>
                             <div class="h-0.5 w-20 bg-gold mx-auto"></div>
-                            <p class="text-slate-600 mt-6 font-montserrat-light">Estamos aquí para escucharte y
-                                brindarte la mejor orientación.</p>
+                            <p class="text-slate-600 mt-6 font-montserrat-light">
+                                Estamos aquí para escucharte y brindarte la mejor orientación.
+                            </p>
                         </div>
                         <form class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -657,8 +692,7 @@
                     <!-- Footer: Brand -->
                     <div class="space-y-6">
                         <div class="flex items-center gap-3 text-gold">
-                            <span class="material-symbols-outlined text-4xl">local_florist</span>
-                            <h2 class="text-2xl font-display font-bold tracking-tight text-white">KalMar</h2>
+                            <img src="/img/kalmar_logo_white_transparent.png" alt="KalMar Logo" class="h-20 w-auto" />
                         </div>
                         <p class="text-bone/60 font-montserrat-light leading-relaxed text-sm">
                             Líderes en atención gerontológica integral. Dedicados a brindar servicios de salud de alta
@@ -669,7 +703,8 @@
                     <div>
                         <h4
                             class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
-                            Enlaces</h4>
+                            Enlaces
+                        </h4>
                         <ul class="space-y-4 text-bone/60 font-montserrat-light text-sm">
                             <li><a class="hover:text-gold transition-colors" href="#">Inicio</a></li>
                             <li><a class="hover:text-gold transition-colors" href="#servicios">Servicios</a></li>
@@ -690,8 +725,9 @@
                             </div> -->
                             <div class="flex items-center gap-4">
                                 <span class="material-symbols-outlined text-gold text-xl">phone_iphone</span>
-                                <a class="text-bone/80 hover:text-gold transition-all" href="tel:+523318331833">+52
-                                    33 18 33 18 33</a>
+                                <a class="text-bone/80 hover:text-gold transition-all" href="tel:+523318331833">
+                                    +52 33 18 33 18 33
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -699,11 +735,12 @@
                     <div>
                         <h4
                             class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
-                            Siguenos</h4>
+                            Siguenos
+                        </h4>
                         <div class="flex gap-4">
                             <a aria-label="Facebook"
                                 class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all"
-                                href="#">
+                                href="#" target="_blank" rel="noopener noreferrer">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
@@ -712,7 +749,7 @@
                             </a>
                             <a aria-label="Instagram"
                                 class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all"
-                                href="#">
+                                href="#" target="_blank" rel="noopener noreferrer">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0 3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z">
@@ -723,8 +760,9 @@
                     </div>
                 </div>
                 <div class="max-w-[1280px] mx-auto px-6 pt-8 border-t border-white/5 text-center">
-                    <p class="text-bone/40 text-[10px] font-montserrat-light tracking-widest uppercase">© 2026 KalMar
-                        Atencion Gerontologica. Todos los derechos reservados.</p>
+                    <p class="text-bone/40 text-[10px] font-montserrat-light tracking-widest uppercase">
+                        © 2026 KalMar Atencion Gerontologica. Todos los derechos reservados.
+                    </p>
                 </div>
             </footer>
 
