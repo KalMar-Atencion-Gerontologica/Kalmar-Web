@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="KalMar Atención Gerontológica — Servicios profesionales de estimulación cognitiva, terapia física y consejería familiar para el bienestar integral del adulto mayor. Lic. Karla Marisol Sanchez Guzman." />
+    <meta name="description"
+        content="KalMar Atención Gerontológica — Servicios profesionales de estimulación cognitiva, terapia física y consejería familiar para el bienestar integral del adulto mayor. Lic. Karla Marisol Sanchez Guzman." />
     <!-- Open Graph -->
     <meta property="og:title" content="KalMar Atención Gerontológica" />
-    <meta property="og:description" content="Servicios profesionales de estimulación cognitiva, terapia física y consejería familiar para el bienestar integral del adulto mayor." />
-    <meta property="og:image" content="./img/kalmar_logo_1024.webp" />
+    <meta property="og:description"
+        content="Servicios profesionales de estimulación cognitiva, terapia física y consejería familiar para el bienestar integral del adulto mayor." />
+    <meta property="og:image" content="./img/kalmar_logo.webp" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_MX" />
+    <meta property="og:url" content="https://kalmar-atencion-gerontologica.github.io/Kalmar-Web/" />
     <title>KalMar Atención Gerontológica</title>
     <link rel="icon" type="image/webp" href="./img/kalmar_logo_favicon.webp" />
     <link rel="icon" type="image/x-icon" href="./img/kalmar_logo_favicon.ico" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Montserrat:wght@300;400;600&amp;family=Manrope:wght@400;700&amp;display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Montserrat:wght@300;400;600&amp;family=Manrope:wght@400;700&amp;display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" />
     <script id="tailwind-config">
         tailwind.config = {
             theme: {
@@ -23,7 +29,7 @@
                     colors: {
                         "primary": "#8a3a19", // Rich Terracotta
                         "primary-muted": "#d9a38f", // Muted Terracotta
-                        "primary-dark": "#8a3a19",
+                        "primary-dark": "#6b2d14",
                         "latte": "#e8d5c4", // Warm Latte
                         "gold": "#d4af37",
                         "bone": "#f8f6f6", // Content Bone
@@ -45,10 +51,12 @@
         }
     </script>
     <style type="text/tailwindcss">
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: theme('colors.bone');
-            scroll-behavior: smooth;
         }
         h1, h2, h3, h4, .font-cinzel {
             font-family: 'Cinzel', serif;
@@ -77,8 +85,8 @@
         }
         /* Hamburger → X icon toggle */
         .close-icon { display: none; }
-        #mobile-menu-toggle:checked ~ div label .menu-icon { display: none; }
-        #mobile-menu-toggle:checked ~ div label .close-icon { display: block; }
+        #mobile-menu-toggle:checked ~ label .menu-icon { display: none; }
+        #mobile-menu-toggle:checked ~ label .close-icon { display: block; }
 
         /* Smooth mobile menu slide */
         #mobile-menu {
@@ -108,13 +116,19 @@
 </head>
 
 <body class="text-slate-900">
+    <noscript>
+        <p style="text-align:center;padding:2rem;font-family:'Montserrat',sans-serif;color:#8a3a19;font-size:1.1rem;">
+            Este sitio requiere JavaScript habilitado para funcionar correctamente. Por favor, actívelo en su navegador.
+        </p>
+    </noscript>
 
     <!-- ==================== PAGE WRAPPER ==================== -->
     <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
         <div class="layout-container flex h-full grow flex-col">
 
             <!-- ==================== HEADER / NAVIGATION ==================== -->
-            <header class="fixed top-0 left-0 right-0 z-50 bg-primary-dark shadow-xl border-b border-gold/30 px-6 md:px-20 py-4">
+            <header
+                class="fixed top-0 left-0 right-0 z-50 bg-primary-dark shadow-xl border-b border-gold/30 px-6 md:px-20 py-4">
                 <div class="flex items-center justify-between max-w-[1280px] mx-auto">
                     <a class="flex items-center gap-3 text-gold" href="#">
                         <img src="./img/kalmar_logo_white.webp" alt="KalMar Logo" class="h-20 w-auto" />
@@ -143,7 +157,8 @@
                                 Blog
                             </a>
                         </nav>
-                        <button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-gold text-primary-dark text-xs font-bold uppercase tracking-widest hover:bg-bone transition-all shadow-lg">
+                        <button
+                            class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-gold text-primary-dark text-xs font-bold uppercase tracking-widest hover:bg-bone transition-all shadow-lg">
                             <a href="#contacto">
                                 <span>Agendar Cita</span>
                             </a>
@@ -156,7 +171,8 @@
                             <span class="material-symbols-outlined text-4xl menu-icon">menu</span>
                             <span class="material-symbols-outlined text-4xl close-icon">close</span>
                         </label>
-                        <div class="absolute top-full left-0 right-0 bg-primary-dark border-b border-gold/20 flex-col p-6 gap-4 shadow-xl" id="mobile-menu">
+                        <div class="absolute top-full left-0 right-0 bg-primary-dark border-b border-gold/20 flex-col p-6 gap-4 shadow-xl"
+                            id="mobile-menu">
                             <nav class="flex flex-col gap-4 text-center">
                                 <a class="text-bone hover:text-gold transition-colors text-lg font-display font-bold uppercase"
                                     href="#">
@@ -189,11 +205,14 @@
 
                 <!-- ===== HERO SECTION ===== -->
                 <section class="relative bg-latte section-divider">
-                    <div class="max-w-[1280px] mx-auto px-6 py-16 md:py-32 flex flex-col md:flex-row items-center gap-12">
+                    <div
+                        class="max-w-[1280px] mx-auto px-6 py-16 md:py-32 flex flex-col md:flex-row items-center gap-12">
                         <div class="flex flex-col gap-8 flex-1">
                             <div class="flex flex-col gap-4">
-                                <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm">Atención Gerontológica Integral</span>
-                                <h1 class="text-primary-dark text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight">
+                                <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm">Atención
+                                    Gerontológica Integral</span>
+                                <h1
+                                    class="text-primary-dark text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight">
                                     Dignidad y Cuidado en <span class="italic">Plenitud</span>
                                 </h1>
                                 <p class="text-slate-700 md:text-xl font-light leading-relaxed max-w-[540px]">
@@ -214,12 +233,12 @@
                         </div>
                         <div class="flex-1 w-full">
                             <div class="relative group">
-                                <div class="absolute -inset-4 bg-gold/10 rounded-xl transform rotate-3 transition-transform group-hover:rotate-1"></div>
-                                <div class="relative w-full aspect-[4/5] bg-center bg-cover rounded-xl border-8 border-bone shadow-2xl"
-                                    role="img"
-                                    aria-label="Lic. Karla Marisol Sanchez Guzman, especialista en gerontología"
-                                    style='background-image: url("./img/HERO.webp");'>
+                                <div
+                                    class="absolute -inset-4 bg-gold/10 rounded-xl transform rotate-3 transition-transform group-hover:rotate-1">
                                 </div>
+                                <img src="./img/HERO.webp"
+                                    alt="Lic. Karla Marisol Sanchez Guzman, especialista en gerontología"
+                                    class="relative w-full aspect-[4/5] object-cover object-center rounded-xl border-8 border-bone shadow-2xl" />
                             </div>
                         </div>
                     </div>
@@ -242,8 +261,10 @@
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <!-- Service Card 1 -->
-                            <div class="bg-white p-10 rounded-xl border border-gold/20 hover:border-gold transition-all hover:shadow-xl group">
-                                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <div
+                                class="bg-white p-10 rounded-xl border border-gold/20 hover:border-gold transition-all hover:shadow-xl group">
+                                <div
+                                    class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
                                     <span class="material-symbols-outlined text-3xl">psychology</span>
                                 </div>
                                 <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">
@@ -255,8 +276,10 @@
                                 </p>
                             </div>
                             <!-- Service Card 2 -->
-                            <div class="bg-white p-10 rounded-xl border border-gold/20 hover:border-gold transition-all hover:shadow-xl group">
-                                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <div
+                                class="bg-white p-10 rounded-xl border border-gold/20 hover:border-gold transition-all hover:shadow-xl group">
+                                <div
+                                    class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
                                     <span class="material-symbols-outlined text-3xl">fitness_center</span>
                                 </div>
                                 <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">
@@ -268,8 +291,10 @@
                                 </p>
                             </div>
                             <!-- Service Card 3 -->
-                            <div class="bg-white p-10 rounded-xl border border-gold/20 hover:border-gold transition-all hover:shadow-xl group">
-                                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <div
+                                class="bg-white p-10 rounded-xl border border-gold/20 hover:border-gold transition-all hover:shadow-xl group">
+                                <div
+                                    class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
                                     <span class="material-symbols-outlined text-3xl">groups</span>
                                 </div>
                                 <h3 class="text-2xl font-display font-bold mb-4 text-slate-800">
@@ -290,18 +315,21 @@
                         <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                             <div class="lg:w-1/2 flex flex-col gap-10">
                                 <div>
-                                    <span class="text-gold font-semibold tracking-[0.2em] uppercase text-sm block mb-4">Sobre Mí</span>
-                                    <h2 class="text-bone text-4xl md:text-5xl font-display font-bold leading-tight mb-8">
+                                    <span
+                                        class="text-gold font-semibold tracking-[0.2em] uppercase text-sm block mb-4">Sobre
+                                        Mí</span>
+                                    <h2
+                                        class="text-bone text-4xl md:text-5xl font-display font-bold leading-tight mb-8">
                                         Trayectoria Profesional
                                     </h2>
                                     <div class="space-y-6">
-                                        <p class="font-montserrat-light text-bone/90 text-lg leading-relaxed">
+                                        <p class="font-light text-bone/90 text-lg leading-relaxed">
                                             Soy la <em>Lic. Karla Marisol Sanchez Guzman</em>, una profesional
                                             apasionada por el bienestar de nuestros adultos mayores. Con años de
                                             experiencia en el sector salud, he dedicado mi carrera a desarrollar un
                                             enfoque que combina la precisión clínica con una empatía profunda.
                                         </p>
-                                        <p class="font-montserrat-light text-bone/90 text-lg leading-relaxed">
+                                        <p class="font-light text-bone/90 text-lg leading-relaxed">
                                             Mi labor en KalMar nace de la convicción de que el envejecimiento no debe
                                             ser sinónimo de pérdida, sino una etapa de vida que requiere atención
                                             especializada, respeto y un acompañamiento constante.
@@ -309,46 +337,50 @@
                                     </div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
+                                    <div
+                                        class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
                                         <span class="material-symbols-outlined text-gold">school</span>
                                         <div>
                                             <h4 class="font-display font-bold text-white text-sm">
                                                 Licenciada en Gerontología
                                             </h4>
-                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                            <p class="font-light text-xs text-bone/70">
                                                 Formación integral en el proceso de envejecimiento biopsicosocial.
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
+                                    <div
+                                        class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
                                         <span class="material-symbols-outlined text-gold">psychology</span>
                                         <div>
                                             <h4 class="font-display font-bold text-white text-sm">
                                                 Especialista en Estimulación Cognitiva
                                             </h4>
-                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                            <p class="font-light text-xs text-bone/70">
                                                 Experta en técnicas para preservar y potenciar la salud mental.
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
+                                    <div
+                                        class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
                                         <span class="material-symbols-outlined text-gold">favorite</span>
                                         <div>
                                             <h4 class="font-display font-bold text-white text-sm">
                                                 Acompañamiento en el Duelo
                                             </h4>
-                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                            <p class="font-light text-xs text-bone/70">
                                                 Apoyo profesional y humano en procesos de pérdida y transición.
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
+                                    <div
+                                        class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
                                         <span class="material-symbols-outlined text-gold">workspace_premium</span>
                                         <div>
                                             <h4 class="font-display font-bold text-white text-sm">
                                                 Atención Ética y Humana
                                             </h4>
-                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                            <p class="font-light text-xs text-bone/70">
                                                 Compromiso absoluto con la dignidad y derechos del paciente.
                                             </p>
                                         </div>
@@ -356,11 +388,14 @@
                                 </div>
                             </div>
                             <div class="lg:w-1/2 relative">
-                                <div class="relative z-10 p-4 bg-bone/10 border border-gold/30 shadow-2xl rounded-2xl transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
-                                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-center bg-cover"
-                                        role="img" aria-label="Karla Marisol en su consultorio"
-                                        style='background-image: url("./img/ABOUT.webp");'>
-                                        <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent"></div>
+                                <div
+                                    class="relative z-10 p-4 bg-bone/10 border border-gold/30 shadow-2xl rounded-2xl transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+                                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl">
+                                        <img src="./img/ABOUT.webp" alt="Karla Marisol en su consultorio"
+                                            class="w-full h-full object-cover object-center" loading="lazy" />
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-primary-dark/60 to-transparent">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -376,7 +411,7 @@
                             Nuestras Instalaciones
                         </h2>
                         <div class="h-0.5 w-24 bg-gold mx-auto mb-8"></div>
-                        <p class="font-montserrat-light text-slate-700 text-lg md:text-xl leading-relaxed max-w-[800px] mx-auto mb-16">
+                        <p class="font-light text-slate-700 text-lg md:text-xl leading-relaxed max-w-[800px] mx-auto mb-16">
                             Diseñamos cada rincón pensando en la comodidad, seguridad y tranquilidad de nuestros
                             pacientes. Un espacio cálido y profesional.
                         </p>
@@ -401,7 +436,9 @@
                 <section class="bg-bone py-24 md:py-32 section-divider" id="testimonios">
                     <div class="max-w-[1280px] mx-auto px-6">
                         <div class="text-center mb-16">
-                            <span class="text-gold font-semibold tracking-[0.2em] uppercase text-sm block mb-4">Experiencias Reales</span>
+                            <span
+                                class="text-gold font-semibold tracking-[0.2em] uppercase text-sm block mb-4">Experiencias
+                                Reales</span>
                             <h2 class="text-primary text-4xl md:text-5xl font-display font-bold">
                                 Testimonios
                             </h2>
@@ -409,22 +446,24 @@
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <!-- Testimonial 1 -->
-                            <div class="bg-white p-8 rounded-xl border border-gold/20 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div
+                                class="bg-white p-8 rounded-xl border border-gold/20 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
                                 <div>
-                                    <span class="material-symbols-outlined text-primary-muted text-4xl mb-4">format_quote</span>
-                                    <p class="text-slate-700 font-montserrat-light leading-relaxed mb-8 italic">
+                                    <span
+                                        class="material-symbols-outlined text-primary-muted text-4xl mb-4">format_quote</span>
+                                    <p class="text-slate-700 font-light leading-relaxed mb-8 italic">
                                         "La atención de la Lic. Karla ha sido una bendición para mi padre. Su paciencia
                                         y profesionalismo han mejorado su estado de ánimo."
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-center bg-cover border border-gold/20" role="img"
-                                        aria-label="Foto de Elena Rodríguez"
-                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnplOXE8RMosXSXLEdWkGtbMR5IzOiaVkv-s3mayk8UQ-78nnol_wmmd1lc9y6FFd426HABzEp6PZ8dmw9kkC_TtRjR1BmnfluUoxA05xdM6oUNBpOyD6Pa0pdvMuOojjxdnMZRO73xU8ijh5XBFMSjIA5-BEVCfVAwF_xBcFIydY6Ycg_OsMsYXWwHXyz0gEHizaCf6BSGzLzt4FguaOPQwzIapB_KaMvC4XHfxlm5l9tmp35MmTXinVSfTolGeYb_vQY2O4Sc2E");'>
-                                    </div>
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnplOXE8RMosXSXLEdWkGtbMR5IzOiaVkv-s3mayk8UQ-78nnol_wmmd1lc9y6FFd426HABzEp6PZ8dmw9kkC_TtRjR1BmnfluUoxA05xdM6oUNBpOyD6Pa0pdvMuOojjxdnMZRO73xU8ijh5XBFMSjIA5-BEVCfVAwF_xBcFIydY6Ycg_OsMsYXWwHXyz0gEHizaCf6BSGzLzt4FguaOPQwzIapB_KaMvC4XHfxlm5l9tmp35MmTXinVSfTolGeYb_vQY2O4Sc2E"
+                                        alt="Foto de Elena Rodríguez"
+                                        class="w-12 h-12 rounded-full object-cover border border-gold/20"
+                                        loading="lazy" />
                                     <div>
                                         <h4 class="font-display text-sm font-bold text-slate-900">
-                                        Elena Rodríguez
+                                            Elena Rodríguez
                                         </h4>
                                         <p class="text-[10px] text-slate-500 uppercase tracking-widest">
                                             Hija de paciente
@@ -433,19 +472,21 @@
                                 </div>
                             </div>
                             <!-- Testimonial 2 -->
-                            <div class="bg-white p-8 rounded-xl border border-gold/20 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div
+                                class="bg-white p-8 rounded-xl border border-gold/20 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
                                 <div>
-                                    <span class="material-symbols-outlined text-primary-muted text-4xl mb-4">format_quote</span>
-                                    <p class="text-slate-700 font-montserrat-light leading-relaxed mb-8 italic">
+                                    <span
+                                        class="material-symbols-outlined text-primary-muted text-4xl mb-4">format_quote</span>
+                                    <p class="text-slate-700 font-light leading-relaxed mb-8 italic">
                                         "Gracias a las terapias físicas personalizadas, he recuperado la confianza para
                                         caminar. Me siento más fuerte y vital."
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-center bg-cover border border-gold/20" role="img"
-                                        aria-label="Foto de Roberto Méndez"
-                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzsD4eyohYHnG3O77HN1cSw9GNGbnFZXxSS6uiDwDzkDdPh6O9AnaKPhQrhEkif7RYd4JCCyzh1awpH8nRiluB71Qd5b252sw6PQZiQnSqFGfi2D5IG7-u00FFcYDTEqM_ujxiGi3bvofvJ8oufqPZyv2X-w-uT-QSM-8xoexaND6v0oM6DojUEMBaEXNBGHm2ptotaSnazV4qQzpgv1IljTgyY64vdgiVwj_3GparoNzfcXCs2y4IqL0KusBXGnx5NzWoTe7VCes");'>
-                                    </div>
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzsD4eyohYHnG3O77HN1cSw9GNGbnFZXxSS6uiDwDzkDdPh6O9AnaKPhQrhEkif7RYd4JCCyzh1awpH8nRiluB71Qd5b252sw6PQZiQnSqFGfi2D5IG7-u00FFcYDTEqM_ujxiGi3bvofvJ8oufqPZyv2X-w-uT-QSM-8xoexaND6v0oM6DojUEMBaEXNBGHm2ptotaSnazV4qQzpgv1IljTgyY64vdgiVwj_3GparoNzfcXCs2y4IqL0KusBXGnx5NzWoTe7VCes"
+                                        alt="Foto de Roberto Méndez"
+                                        class="w-12 h-12 rounded-full object-cover border border-gold/20"
+                                        loading="lazy" />
                                     <div>
                                         <h4 class="font-display text-sm font-bold text-slate-900">
                                             Roberto Méndez
@@ -457,19 +498,21 @@
                                 </div>
                             </div>
                             <!-- Testimonial 3 -->
-                            <div class="bg-white p-8 rounded-xl border border-gold/20 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                            <div
+                                class="bg-white p-8 rounded-xl border border-gold/20 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
                                 <div>
-                                    <span class="material-symbols-outlined text-primary-muted text-4xl mb-4">format_quote</span>
-                                    <p class="text-slate-700 font-montserrat-light leading-relaxed mb-8 italic">
+                                    <span
+                                        class="material-symbols-outlined text-primary-muted text-4xl mb-4">format_quote</span>
+                                    <p class="text-slate-700 font-light leading-relaxed mb-8 italic">
                                         "La consejería familiar nos dio las herramientas para entender los cambios de mi
                                         abuela. Un espacio de paz."
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-center bg-cover border border-gold/20" role="img"
-                                        aria-label="Foto de Familia Velázquez"
-                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZkEcw6s20xwOkcMPABha6XRyZxybm-hkkWq4jJDf7rNklvD7C6bmHKruNYUbJ93ztP72n9joTeu2wp86wAMo2_1kxFa2dtwGwRdY_74YxmGUZNJeKPzfyNX7uAzlcmv3usX9HXt7rynhN-XgNMwNcDiwAJNqfvY1OSkHVHXUga6Zs2TixVawJPZvenDoKdCx588p-vCxNnXIVHv4JaSVjF3Q0B1xCo6z2tgtmjWpkUz7CXatuTi6dTo8h2MYoyWdMLtZ0Y-gsOz8");'>
-                                    </div>
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZkEcw6s20xwOkcMPABha6XRyZxybm-hkkWq4jJDf7rNklvD7C6bmHKruNYUbJ93ztP72n9joTeu2wp86wAMo2_1kxFa2dtwGwRdY_74YxmGUZNJeKPzfyNX7uAzlcmv3usX9HXt7rynhN-XgNMwNcDiwAJNqfvY1OSkHVHXUga6Zs2TixVawJPZvenDoKdCx588p-vCxNnXIVHv4JaSVjF3Q0B1xCo6z2tgtmjWpkUz7CXatuTi6dTo8h2MYoyWdMLtZ0Y-gsOz8"
+                                        alt="Foto de Familia Velázquez"
+                                        class="w-12 h-12 rounded-full object-cover border border-gold/20"
+                                        loading="lazy" />
                                     <div>
                                         <h4 class="font-display text-sm font-bold text-slate-900">
                                             Familia Velázquez
@@ -505,7 +548,7 @@
                                     </div>
                                 </summary>
                                 <div class="pb-4">
-                                    <p class="font-montserrat-light text-slate-700 leading-relaxed">
+                                    <p class="font-light text-slate-700 leading-relaxed">
                                         Es un enfoque integral para el estudio y atención del proceso de envejecimiento,
                                         que no solo se enfoca en la parte médica, sino también en el bienestar
                                         psicológico y social.
@@ -523,7 +566,7 @@
                                     </div>
                                 </summary>
                                 <div class="pb-4">
-                                    <p class="font-montserrat-light text-slate-700 leading-relaxed">
+                                    <p class="font-light text-slate-700 leading-relaxed">
                                         Sí, entendemos que la comodidad del hogar es fundamental. Contamos con servicios
                                         especializados de atención domiciliaria previa agenda.
                                     </p>
@@ -540,7 +583,7 @@
                                     </div>
                                 </summary>
                                 <div class="pb-4">
-                                    <p class="font-montserrat-light text-slate-700 leading-relaxed">
+                                    <p class="font-light text-slate-700 leading-relaxed">
                                         Puedes agendar tu valoración a través de nuestro formulario de contacto, vía
                                         WhatsApp con el botón flotante, o llamándonos directamente.
                                     </p>
@@ -561,60 +604,71 @@
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <!-- Blog Card 1 -->
-                            <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
-                                <div class="aspect-video w-full bg-center bg-cover" role="img"
-                                    aria-label="Artículo sobre salud mental y mente activa"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5egoBwQlDega5rhB45UQCadeyEcmKfzZGP1izas7K2MlCzeVC3iGhEW8U2eOIVx2khBapQEZKQRQyZAcOVOKY42BPKvHz-BkqAwbGnSmWtuQgDJ3Hx_xPKltSQI5VZXj_x8xCYyouSWLOWV5vKLm2jMinvWbHVRmSsEmeheiZExIrvBVGgnOFf_S7G629xqqGFYTlzhc_yyiIf93bw3x8PtxbrHyrh9ha19HI0xKiVf8U3CIa1i4bRs7iqAYWR5FpKp2IS7giF6c");'>
-                                </div>
+                            <article
+                                class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5egoBwQlDega5rhB45UQCadeyEcmKfzZGP1izas7K2MlCzeVC3iGhEW8U2eOIVx2khBapQEZKQRQyZAcOVOKY42BPKvHz-BkqAwbGnSmWtuQgDJ3Hx_xPKltSQI5VZXj_x8xCYyouSWLOWV5vKLm2jMinvWbHVRmSsEmeheiZExIrvBVGgnOFf_S7G629xqqGFYTlzhc_yyiIf93bw3x8PtxbrHyrh9ha19HI0xKiVf8U3CIa1i4bRs7iqAYWR5FpKp2IS7giF6c"
+                                    alt="Artículo sobre salud mental y mente activa"
+                                    class="aspect-video w-full object-cover" loading="lazy" />
                                 <div class="p-8 flex flex-col h-full">
-                                    <span class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Salud Mental</span>
-                                    <h3 class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
+                                    <span class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Salud
+                                        Mental</span>
+                                    <h3
+                                        class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
                                         Mantener la mente activa
                                     </h3>
-                                    <p class="font-montserrat-light text-slate-600 text-sm leading-relaxed mb-6">
-                                        Estrategias prácticas para fortalecer las conexiones neuronales y prevenir el olvido cotidiano.
+                                    <p class="font-light text-slate-600 text-sm leading-relaxed mb-6">
+                                        Estrategias prácticas para fortalecer las conexiones neuronales y prevenir el
+                                        olvido cotidiano.
                                     </p>
                                     <a class="text-primary font-bold text-xs uppercase tracking-widest mt-auto inline-flex items-center gap-2"
-                                        href="#">Leer más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                        href="#">Leer más <span
+                                            class="material-symbols-outlined text-sm">arrow_forward</span>
                                     </a>
                                 </div>
                             </article>
                             <!-- Blog Card 2 -->
-                            <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
-                                <div class="aspect-video w-full bg-center bg-cover" role="img"
-                                    aria-label="Artículo sobre alimentación consciente"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRjWuNVLmf_ILmZqtAguUXMCAgyy_0Yl06BgfRv7M6XiOABcMHVeH_W0GKpd3WmdGH55nIzdsWbZg_28BIIBCKCyNFHe2qffkksrGLETf0Z6P7WvKN1ftWYMwUtw1i1n4DqwEc81Xh4IhJbVOTA3GGj6tSo24NwVnKngUqsYdvaZGgCkXrZvLmzgo2s3bKM5F4OidcjekkeWJT_ib9xnce8DJuaSaJ7Hp7MhEIVTgAn6pMM4CCCrIk1oaAvin-Ua-pPaWavvcNjng");'>
-                                </div>
+                            <article
+                                class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRjWuNVLmf_ILmZqtAguUXMCAgyy_0Yl06BgfRv7M6XiOABcMHVeH_W0GKpd3WmdGH55nIzdsWbZg_28BIIBCKCyNFHe2qffkksrGLETf0Z6P7WvKN1ftWYMwUtw1i1n4DqwEc81Xh4IhJbVOTA3GGj6tSo24NwVnKngUqsYdvaZGgCkXrZvLmzgo2s3bKM5F4OidcjekkeWJT_ib9xnce8DJuaSaJ7Hp7MhEIVTgAn6pMM4CCCrIk1oaAvin-Ua-pPaWavvcNjng"
+                                    alt="Artículo sobre alimentación consciente"
+                                    class="aspect-video w-full object-cover" loading="lazy" />
                                 <div class="p-8 flex flex-col h-full">
-                                    <span class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Nutrición</span>
-                                    <h3 class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
+                                    <span
+                                        class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Nutrición</span>
+                                    <h3
+                                        class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
                                         Alimentación consciente
                                     </h3>
-                                    <p class="font-montserrat-light text-slate-600 text-sm leading-relaxed mb-6">
-                                        Guía sobre los nutrientes esenciales para mantener la energía y vitalidad en la madurez.
+                                    <p class="font-light text-slate-600 text-sm leading-relaxed mb-6">
+                                        Guía sobre los nutrientes esenciales para mantener la energía y vitalidad en la
+                                        madurez.
                                     </p>
                                     <a class="text-primary font-bold text-xs uppercase tracking-widest mt-auto inline-flex items-center gap-2"
-                                        href="#">Leer más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                        href="#">Leer más <span
+                                            class="material-symbols-outlined text-sm">arrow_forward</span>
                                     </a>
                                 </div>
                             </article>
                             <!-- Blog Card 3 -->
-                            <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
-                                <div class="aspect-video w-full bg-center bg-cover" role="img"
-                                    aria-label="Artículo sobre impacto social y bienestar"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0p9gNUlBE0bP9zemt1aJDUYI4cvz4bds3cG5mXDZlr_Z_RRt8mdNS51bGyHqAa8W7xk5wJzkRNzuGadbh0WBcm2lCAV3hX6Ed_8EXAIMzW7GcNJnoK4z6xN3uQLg4bAles2BRsA1r42VAswstVzvfXlRltAZTBzetpsKpup5uIfLMVF8TIqJvDhW78P-v0dOuTxDEbaEJxwFS0LaPdRe3Uk3Gu7KYOUSora2f-g_90LgzBEJ9TdmF1-PFuxdTUpaY_y3iLL0XxIM");'>
-                                </div>
+                            <article
+                                class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-gold/10 group">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0p9gNUlBE0bP9zemt1aJDUYI4cvz4bds3cG5mXDZlr_Z_RRt8mdNS51bGyHqAa8W7xk5wJzkRNzuGadbh0WBcm2lCAV3hX6Ed_8EXAIMzW7GcNJnoK4z6xN3uQLg4bAles2BRsA1r42VAswstVzvfXlRltAZTBzetpsKpup5uIfLMVF8TIqJvDhW78P-v0dOuTxDEbaEJxwFS0LaPdRe3Uk3Gu7KYOUSora2f-g_90LgzBEJ9TdmF1-PFuxdTUpaY_y3iLL0XxIM"
+                                    alt="Artículo sobre impacto social y bienestar"
+                                    class="aspect-video w-full object-cover" loading="lazy" />
                                 <div class="p-8 flex flex-col h-full">
-                                    <span class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Bienestar</span>
-                                    <h3 class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
+                                    <span
+                                        class="text-gold font-bold text-[10px] uppercase tracking-widest mb-4">Bienestar</span>
+                                    <h3
+                                        class="font-display text-xl text-primary-dark mb-4 group-hover:text-primary transition-colors">
                                         Impacto Social
                                     </h3>
-                                    <p class="font-montserrat-light text-slate-600 text-sm leading-relaxed mb-6">
+                                    <p class="font-light text-slate-600 text-sm leading-relaxed mb-6">
                                         La importancia de mantener vínculos sociales para combatir la soledad y mejorar
                                         la calidad de vida.
                                     </p>
                                     <a class="text-primary font-bold text-xs uppercase tracking-widest mt-auto inline-flex items-center gap-2"
-                                        href="#">Leer más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                        href="#">Leer más <span
+                                            class="material-symbols-outlined text-sm">arrow_forward</span>
                                     </a>
                                 </div>
                             </article>
@@ -637,7 +691,7 @@
                                 href="#contacto">
                                 Solicitar Información
                             </a>
-                            <a class="min-w-[240px] flex items-center justify-center gap-3 bg-transparent border-2 border-bone/50 text-bone font-montserrat-light uppercase tracking-widest px-10 py-[18px] rounded-full hover:bg-white/10 hover:border-bone transition-all text-xs"
+                            <a class="min-w-[240px] flex items-center justify-center gap-3 bg-transparent border-2 border-bone/50 text-bone font-light uppercase tracking-widest px-10 py-[18px] rounded-full hover:bg-white/10 hover:border-bone transition-all text-xs"
                                 download="" href="#">
                                 <span class="material-symbols-outlined text-xl">picture_as_pdf</span>
                                 Catálogo (PDF)
@@ -654,43 +708,55 @@
                                 Contactanos o Agenda tu Cita
                             </h2>
                             <div class="h-0.5 w-20 bg-gold mx-auto"></div>
-                            <p class="text-slate-600 mt-6 font-montserrat-light">
+                            <p class="text-slate-600 mt-6 font-light">
                                 Estamos aquí para escucharte y brindarte la mejor orientación.
                             </p>
                         </div>
                         <form class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="flex flex-col gap-2">
-                                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold" for="nombre">
+                                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold"
+                                        for="nombre">
                                         Nombre Completo
                                     </label>
-                                    <input class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-montserrat-light"
-                                        id="nombre" placeholder="Tu nombre" type="text" />
+                                    <input
+                                        class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-light"
+                                        id="nombre" name="nombre" placeholder="Tu nombre" type="text" required />
                                 </div>
                                 <div class="flex flex-col gap-2">
-                                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold" for="email">
+                                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold"
+                                        for="email">
                                         Correo Electrónico
                                     </label>
-                                    <input class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-montserrat-light"
-                                        id="email" placeholder="ejemplo@correo.com" type="email" />
+                                    <input
+                                        class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-light"
+                                        id="email" name="email" placeholder="ejemplo@correo.com" type="email"
+                                        required />
                                 </div>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold" for="telefono">
+                                <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold"
+                                    for="telefono">
                                     Teléfono
                                 </label>
-                                <input class="w-full bg-white border border-primary/10 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-montserrat-light placeholder:text-slate-400" 
-                                    id="telefono" placeholder="+52 00-0000-0000" type="tel"/>
-                                </div>
+                                <input
+                                    class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-light placeholder:text-slate-400"
+                                    id="telefono" name="telefono" placeholder="+52 00-0000-0000" type="tel" required />
+                            </div>
                             <div class="flex flex-col gap-2">
-                                <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold" for="mensaje">
+                                <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold"
+                                    for="mensaje">
                                     Mensaje
                                 </label>
-                                <textarea class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 h-40 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-montserrat-light"
-                                    id="mensaje" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                                <textarea
+                                    class="w-full bg-white border border-gold/20 rounded-lg px-4 py-3 h-40 focus:ring-2 focus:ring-primary focus:border-transparent transition-all font-light"
+                                    id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?"
+                                    required></textarea>
                             </div>
                             <div class="flex justify-center pt-4">
-                                <button class="min-w-[240px] h-14 bg-gold text-white font-bold uppercase tracking-widest rounded-full hover:text-primary-dark transition-all shadow-lg" type="submit">
+                                <button
+                                    class="min-w-[240px] h-14 bg-gold text-white font-bold uppercase tracking-widest rounded-full hover:text-primary-dark transition-all shadow-lg"
+                                    type="submit">
                                     Enviar Mensaje
                                 </button>
                             </div>
@@ -706,12 +772,14 @@
                     <!-- Footer: Brand -->
                     <div class="space-y-6">
                         <div class="flex items-center gap-3 text-gold">
-                            <img src="./img/kalmar_logo_white.webp" alt="KalMar Logo" class="h-20 w-auto" />
+                            <img src="./img/kalmar_logo_white.webp" alt="KalMar Logo" class="h-20 w-auto"
+                                loading="lazy" />
                         </div>
-                        <h4 class="font-display font-bold uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
+                        <h4
+                            class="font-display font-bold uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
                             Sobre KalMar
                         </h4>
-                        <p class="text-bone/60 font-montserrat-light leading-relaxed text-sm">
+                        <p class="text-bone/60 font-light leading-relaxed text-sm">
                             Líderes en atención gerontológica integral. Dedicados a brindar servicios de salud de alta
                             calidad con un enfoque humanista para el adulto mayor y su familia en cada etapa.
                         </p>
@@ -719,14 +787,18 @@
 
                     <!-- Footer: Links -->
                     <div>
-                        <h4 class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
+                        <h4
+                            class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
                             Enlaces Rápidos
                         </h4>
-                        <ul class="space-y-4 text-bone/60 font-montserrat-light text-sm">
+                        <ul class="space-y-4 text-bone/60 font-light text-sm">
                             <li><a class="hover:text-gold transition-colors" href="#">Inicio</a></li>
-                            <li><a class="hover:text-gold transition-colors" href="#servicios">Nuestros Servicios</a></li>
-                            <li><a class="hover:text-gold transition-colors" href="#trayectoria">Trayectoria de Karla</a></li>
-                            <li><a class="hover:text-gold transition-colors" href="#testimonios">Testimonios de nuestros pacientes</a></li>
+                            <li><a class="hover:text-gold transition-colors" href="#servicios">Nuestros Servicios</a>
+                            </li>
+                            <li><a class="hover:text-gold transition-colors" href="#trayectoria">Trayectoria de
+                                    Karla</a></li>
+                            <li><a class="hover:text-gold transition-colors" href="#testimonios">Testimonios de nuestros
+                                    pacientes</a></li>
                             <li><a class="hover:text-gold transition-colors" href="#faq">Preguntas Frecuentes</a></li>
                             <li><a class="hover:text-gold transition-colors" href="#blog">Artículos de Interés</a></li>
                             <li><a class="hover:text-gold transition-colors" href="#contacto">Contacto</a></li>
@@ -735,16 +807,17 @@
 
                     <!-- Footer: Contact -->
                     <div>
-                        <h4 class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
+                        <h4
+                            class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
                             Contacto
                         </h4>
-                        <div class="space-y-6 text-sm font-montserrat-light">
+                        <div class="space-y-6 text-sm font-light">
                             <!-- DIRECCION CONSULTORIO NO USADO POR EL MOMENTO
                             <div class="flex items-start gap-4 group">
                                 <div class="flex flex-col gap-4">
                                     <div class="flex items-start gap-4">
                                         <span class="material-symbols-outlined text-gold mt-1">location_on</span>
-                                        <div class="text-bone/60 font-montserrat-light leading-relaxed">
+                                        <div class="text-bone/60 font-light leading-relaxed">
                                             <p class="text-white font-semibold mb-1">
                                                 Visítanos
                                             </p>
@@ -762,7 +835,7 @@
                             <!-- TELEFONO CONTACTO -->
                             <div class="flex items-center gap-4 group">
                                 <span class="material-symbols-outlined text-gold">phone_iphone</span>
-                                <a class="text-bone/80 font-bold text-lg hover:text-gold transition-all" 
+                                <a class="text-bone/80 font-bold text-lg hover:text-gold transition-all"
                                     href="tel:+523318331833">
                                     +52 33 18 33 18 33
                                 </a>
@@ -770,7 +843,7 @@
                             <!-- EMAIL CONTACTO -->
                             <div class="flex items-center gap-4 group">
                                 <span class="material-symbols-outlined text-gold">mail</span>
-                                <a class="text-bone/60 font-montserrat-light hover:text-gold transition-colors"
+                                <a class="text-bone/60 font-light hover:text-gold transition-colors"
                                     href="mailto:kalmaratenciongerontologica@gmail.com">
                                     kalmaratenciongerontologica@gmail.com
                                 </a>
@@ -780,27 +853,35 @@
 
                     <!-- Footer: Socials -->
                     <div>
-                        <h4 class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
+                        <h4
+                            class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
                             Redes Sociales
                         </h4>
-                        <p class="text-bone/60 font-montserrat-light mb-6 text-sm">
+                        <p class="text-bone/60 font-light mb-6 text-sm">
                             Síguenos para consejos sobre el cuidado del adulto mayor y noticias de KalMar.
                         </p>
                         <div class="flex gap-4">
                             <!-- Facebook -->
-                            <a aria-label="Facebook" 
+                            <a aria-label="Facebook"
                                 class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all shadow-lg hover:shadow-gold/20"
                                 href="#" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                    </path>
                                 </svg>
                             </a>
                             <!-- Instagram -->
                             <a aria-label="Instagram"
                                 class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all shadow-lg hover:shadow-gold/20"
-                                href="https://www.instagram.com/kalmar_gerontologia/" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                                href="https://www.instagram.com/kalmar_gerontologia/" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                    </path>
                                 </svg>
                             </a>
                             <!-- ===== TO DO LinkedI ===== -->
@@ -816,17 +897,16 @@
                 </div>
 
                 <!-- Footer: Copyright -->
-                <div class="max-w-[1280px] mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-bone/40 text-[10px] font-montserrat-light tracking-widest uppercase">
+                <div
+                    class="max-w-[1280px] mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-bone/40 text-[10px] font-light tracking-widest uppercase">
                         © 2026 KalMar Atencion Gerontologica. Todos los derechos reservados.
                     </p>
-                    <div class="flex gap-6 text-[10px] text-bone/40 uppercase tracking-widest font-montserrat-light">
-                        <label class="hover:text-gold transition-colors cursor-pointer" 
-                            for="privacy-modal-toggle">
+                    <div class="flex gap-6 text-[10px] text-bone/40 uppercase tracking-widest font-light">
+                        <label class="hover:text-gold transition-colors cursor-pointer" for="privacy-modal-toggle">
                             Política de Privacidad
                         </label>
-                        <label class="hover:text-gold transition-colors cursor-pointer" 
-                            for="terms-modal-toggle">
+                        <label class="hover:text-gold transition-colors cursor-pointer" for="terms-modal-toggle">
                             Términos de Servicio
                         </label>
                     </div>
@@ -837,34 +917,40 @@
 
     <!-- ==================== PRIVACY POLICY MODAL ==================== -->
     <input class="hidden peer" id="privacy-modal-toggle" type="checkbox" />
-    <div id="privacy-modal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+    <div id="privacy-modal"
+        class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-bone rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col">
             <!-- Modal Header -->
             <div class="flex items-center justify-between p-6 md:p-8 border-b border-gold/20">
                 <h2 class="text-2xl md:text-3xl font-display font-bold text-primary">
                     Política de Privacidad
                 </h2>
-                <label for="privacy-modal-toggle" class="cursor-pointer text-primary hover:text-primary-dark transition-colors">
+                <label for="privacy-modal-toggle"
+                    class="cursor-pointer text-primary hover:text-primary-dark transition-colors">
                     <span class="material-symbols-outlined text-3xl">close</span>
                 </label>
             </div>
-            
+
             <!-- Modal Content -->
-            <div class="overflow-y-auto flex-1 p-6 md:p-8 text-slate-700 font-montserrat-light space-y-6">
-                
+            <div class="overflow-y-auto flex-1 p-6 md:p-8 text-slate-700 font-light space-y-6">
+
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">1. Introducción</h3>
                     <p class="leading-relaxed">
-                        KalMar Atención Gerontológica ("Compañía", "nosotros" o "nuestro") respeta la privacidad de sus usuarios 
-                        ("usuario" o "usted"). Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y 
-                        protegemos información en relación con nuestro sitio web y servicios, de conformidad con la Ley Federal 
+                        KalMar Atención Gerontológica ("Compañía", "nosotros" o "nuestro") respeta la privacidad de sus
+                        usuarios
+                        ("usuario" o "usted"). Esta Política de Privacidad explica cómo recopilamos, utilizamos,
+                        divulgamos y
+                        protegemos información en relación con nuestro sitio web y servicios, de conformidad con la Ley
+                        Federal
                         de Protección de Datos Personales en Posesión de Sujetos Obligados (LFPDPSO).
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">2. Información que Recopilamos</h3>
-                    <p class="mb-3 leading-relaxed">Recopilamos información que usted nos proporciona voluntariamente, incluyendo:</p>
+                    <p class="mb-3 leading-relaxed">Recopilamos información que usted nos proporciona voluntariamente,
+                        incluyendo:</p>
                     <ul class="list-disc list-inside space-y-2 ml-2">
                         <li>Nombre completo y datos de contacto</li>
                         <li>Correo electrónico y número telefónico</li>
@@ -890,8 +976,9 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">4. Consentimiento</h3>
                     <p class="leading-relaxed">
-                        Al proporcionar información personal a través de nuestro sitio web o formularios, usted otorga su 
-                        consentimiento expreso para que KalMar trate sus datos personales de acuerdo con esta política. 
+                        Al proporcionar información personal a través de nuestro sitio web o formularios, usted otorga
+                        su
+                        consentimiento expreso para que KalMar trate sus datos personales de acuerdo con esta política.
                         Puede retirar su consentimiento en cualquier momento contactándonos directamente.
                     </p>
                 </section>
@@ -899,8 +986,9 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">5. Seguridad de Datos</h3>
                     <p class="leading-relaxed">
-                        Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger sus datos 
-                        personales contra acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, no podemos 
+                        Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger sus datos
+                        personales contra acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, no
+                        podemos
                         garantizar la seguridad absoluta de la transmisión de datos por internet.
                     </p>
                 </section>
@@ -908,14 +996,17 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">6. Confidencialidad</h3>
                     <p class="leading-relaxed">
-                        Toda información de salud y personal de nuestros pacientes es tratada bajo estricta confidencialidad 
-                        de conformidad con las normas éticas profesionales y la legislación sanitaria aplicable en México.
+                        Toda información de salud y personal de nuestros pacientes es tratada bajo estricta
+                        confidencialidad
+                        de conformidad con las normas éticas profesionales y la legislación sanitaria aplicable en
+                        México.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">7. Derechos del Titular de Datos</h3>
-                    <p class="mb-3 leading-relaxed">Conforme a la LFPDPSO, como titular de datos personales tiene derecho a:</p>
+                    <p class="mb-3 leading-relaxed">Conforme a la LFPDPSO, como titular de datos personales tiene
+                        derecho a:</p>
                     <ul class="list-disc list-inside space-y-2 ml-2">
                         <li><strong>Acceso:</strong> Conocer qué datos personales tenemos sobre usted</li>
                         <li><strong>Rectificación:</strong> Solicitar la corrección de datos inexactos</li>
@@ -929,15 +1020,17 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">8. Cookies y Tecnologías de Rastreo</h3>
                     <p class="leading-relaxed">
-                        Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar su experiencia. 
-                        Puede configurar su navegador para rechazar cookies, aunque esto puede afectar la funcionalidad del sitio.
+                        Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar su experiencia.
+                        Puede configurar su navegador para rechazar cookies, aunque esto puede afectar la funcionalidad
+                        del sitio.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">9. Terceros</h3>
                     <p class="leading-relaxed">
-                        No compartimos sus datos personales con terceros sin su consentimiento, excepto cuando sea requerido 
+                        No compartimos sus datos personales con terceros sin su consentimiento, excepto cuando sea
+                        requerido
                         por ley o para propósitos directamente relacionados con nuestros servicios de salud.
                     </p>
                 </section>
@@ -945,7 +1038,7 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">10. Cambios en la Política</h3>
                     <p class="leading-relaxed">
-                        Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. 
+                        Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento.
                         Los cambios serán efectivos cuando se publiquen en nuestro sitio web.
                     </p>
                 </section>
@@ -953,7 +1046,8 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">11. Contacto</h3>
                     <p class="leading-relaxed">
-                        Para ejercer sus derechos ARCO (Acceso, Rectificación, Cancelación u Oposición) o si tiene preguntas 
+                        Para ejercer sus derechos ARCO (Acceso, Rectificación, Cancelación u Oposición) o si tiene
+                        preguntas
                         sobre esta política, contáctenos:
                     </p>
                     <div class="mt-4 p-4 bg-white border-l-4 border-gold rounded">
@@ -973,7 +1067,8 @@
 
             <!-- Modal Footer -->
             <div class="flex justify-end gap-4 p-6 md:p-8 border-t border-gold/20 bg-bone/50">
-                <label for="privacy-modal-toggle" class="px-6 py-2.5 rounded-full font-bold uppercase tracking-widest text-sm cursor-pointer border-2 border-primary text-primary hover:bg-primary/5 transition-colors">
+                <label for="privacy-modal-toggle"
+                    class="px-6 py-2.5 rounded-full font-bold uppercase tracking-widest text-sm cursor-pointer border-2 border-primary text-primary hover:bg-primary/5 transition-colors">
                     Cerrar
                 </label>
             </div>
@@ -982,26 +1077,29 @@
 
     <!-- ==================== TERMS OF SERVICE MODAL ==================== -->
     <input class="hidden peer" id="terms-modal-toggle" type="checkbox" />
-    <div id="terms-modal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+    <div id="terms-modal"
+        class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-bone rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col">
             <!-- Modal Header -->
             <div class="flex items-center justify-between p-6 md:p-8 border-b border-gold/20">
                 <h2 class="text-2xl md:text-3xl font-display font-bold text-primary">
                     Términos de Servicio
                 </h2>
-                <label for="terms-modal-toggle" class="cursor-pointer text-primary hover:text-primary-dark transition-colors">
+                <label for="terms-modal-toggle"
+                    class="cursor-pointer text-primary hover:text-primary-dark transition-colors">
                     <span class="material-symbols-outlined text-3xl">close</span>
                 </label>
             </div>
-            
+
             <!-- Modal Content -->
-            <div class="overflow-y-auto flex-1 p-6 md:p-8 text-slate-700 font-montserrat-light space-y-6">
-                
+            <div class="overflow-y-auto flex-1 p-6 md:p-8 text-slate-700 font-light space-y-6">
+
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">1. Aceptación de Términos</h3>
                     <p class="leading-relaxed">
-                        Al acceder y utilizar este sitio web y los servicios de KalMar Atención Gerontológica, 
-                        usted acepta estar obligado por estos Términos de Servicio. Si no acepta alguno de estos términos, 
+                        Al acceder y utilizar este sitio web y los servicios de KalMar Atención Gerontológica,
+                        usted acepta estar obligado por estos Términos de Servicio. Si no acepta alguno de estos
+                        términos,
                         le solicitamos que no utilice nuestros servicios.
                     </p>
                 </section>
@@ -1009,7 +1107,8 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">2. Descripción de Servicios</h3>
                     <p class="mb-3 leading-relaxed">
-                        KalMar Atención Gerontológica ofrece servicios especializados de atención a adultos mayores, incluyendo:
+                        KalMar Atención Gerontológica ofrece servicios especializados de atención a adultos mayores,
+                        incluyendo:
                     </p>
                     <ul class="list-disc list-inside space-y-2 ml-2">
                         <li>Estimulación Cognitiva Neuropsicológica</li>
@@ -1023,8 +1122,10 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">3. Elegibilidad</h3>
                     <p class="leading-relaxed">
-                        Al utilizar nuestros servicios, usted declara que es mayor de edad o que cuenta con la autorización 
-                        de su representante legal. Si actúa en representación de un paciente, garantiza que tiene autoridad legal 
+                        Al utilizar nuestros servicios, usted declara que es mayor de edad o que cuenta con la
+                        autorización
+                        de su representante legal. Si actúa en representación de un paciente, garantiza que tiene
+                        autoridad legal
                         para hacerlo.
                     </p>
                 </section>
@@ -1044,20 +1145,25 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">5. Limitaciones de Responsabilidad</h3>
                     <p class="mb-3 leading-relaxed">
-                        <strong>Exención médica:</strong> Los servicios de KalMar son de carácter terapéutico y de apoyo. 
-                        No reemplazan la consulta médica profesional. Para emergencias médicas, contacte a los servicios de salud competentes.
+                        <strong>Exención médica:</strong> Los servicios de KalMar son de carácter terapéutico y de
+                        apoyo.
+                        No reemplazan la consulta médica profesional. Para emergencias médicas, contacte a los servicios
+                        de salud competentes.
                     </p>
                     <p class="leading-relaxed">
-                        KalMar no es responsable por: (a) interrupciones del servicio por causas ajenas a nuestro control; 
-                        (b) daños indirectos o incidentales; (c) cambios en el estado de salud del paciente que requieran intervención médica urgente.
+                        KalMar no es responsable por: (a) interrupciones del servicio por causas ajenas a nuestro
+                        control;
+                        (b) daños indirectos o incidentales; (c) cambios en el estado de salud del paciente que
+                        requieran intervención médica urgente.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">6. Propiedad Intelectual</h3>
                     <p class="leading-relaxed">
-                        Todos los contenidos del sitio web, incluyendo textos, imágenes, logos, y diseño, 
-                        son propiedad de KalMar o están autorizados para su uso. No puede reproducir, distribuir o transmitir 
+                        Todos los contenidos del sitio web, incluyendo textos, imágenes, logos, y diseño,
+                        son propiedad de KalMar o están autorizados para su uso. No puede reproducir, distribuir o
+                        transmitir
                         contenido sin autorización expresa.
                     </p>
                 </section>
@@ -1080,8 +1186,9 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">8. Confidencialidad y Registro Médico</h3>
                     <p class="leading-relaxed">
-                        Todos los registros y comunicaciones médicas serán mantenidos con estricta confidencialidad 
-                        de acuerdo con la ley sanitaria mexicana. Solo personal autorizado tendrá acceso a esta información. 
+                        Todos los registros y comunicaciones médicas serán mantenidos con estricta confidencialidad
+                        de acuerdo con la ley sanitaria mexicana. Solo personal autorizado tendrá acceso a esta
+                        información.
                         El paciente tiene derecho a solicitar acceso a su expediente en cualquier momento.
                     </p>
                 </section>
@@ -1089,24 +1196,28 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">9. Modificaciones de Servicios</h3>
                     <p class="leading-relaxed">
-                        Nos reservamos el derecho de modificar, suspender o descontinuar servicios en cualquier momento, 
-                        con notificación previa. Los cambios materiales serán comunicados con al menos 30 días de anticipación.
+                        Nos reservamos el derecho de modificar, suspender o descontinuar servicios en cualquier momento,
+                        con notificación previa. Los cambios materiales serán comunicados con al menos 30 días de
+                        anticipación.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">10. Suspensión de Servicios</h3>
                     <p class="leading-relaxed">
-                        KalMar puede suspender o terminar el acceso a servicios si: (a) hay incumplimiento de estos términos; 
-                        (b) se detecta actividad fraudulenta; (c) no se realizan pagos acordados; (d) hay abuso de los servicios.
+                        KalMar puede suspender o terminar el acceso a servicios si: (a) hay incumplimiento de estos
+                        términos;
+                        (b) se detecta actividad fraudulenta; (c) no se realizan pagos acordados; (d) hay abuso de los
+                        servicios.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">11. Acuerdos de Pago</h3>
                     <p class="leading-relaxed">
-                        Los precios de servicios son establecidos por KalMar y están sujetos a cambios. 
-                        Se notificará sobre cambios de precios con antecedencia. El incumplimiento en el pago puede resultar 
+                        Los precios de servicios son establecidos por KalMar y están sujetos a cambios.
+                        Se notificará sobre cambios de precios con antecedencia. El incumplimiento en el pago puede
+                        resultar
                         en la suspensión de servicios.
                     </p>
                 </section>
@@ -1127,24 +1238,26 @@
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">13. Limitaciones Legales</h3>
                     <p class="leading-relaxed">
-                        De conformidad con la ley mexicana, en la máxima medida permitida, KalMar no será responsable 
-                        por daños especiales, incidentales, indirectos o punitivos, incluso si se le ha informado de la posibilidad de tales daños.
+                        De conformidad con la ley mexicana, en la máxima medida permitida, KalMar no será responsable
+                        por daños especiales, incidentales, indirectos o punitivos, incluso si se le ha informado de la
+                        posibilidad de tales daños.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">14. Ley Aplicable y Jurisdicción</h3>
                     <p class="leading-relaxed">
-                        Estos Términos de Servicio se regirán conforme a la legislación de los Estados Unidos Mexicanos. 
-                        Cualquier disputa será resuelta en los tribunales competentes de México, conforme a la ley aplicable.
+                        Estos Términos de Servicio se regirán conforme a la legislación de los Estados Unidos Mexicanos.
+                        Cualquier disputa será resuelta en los tribunales competentes de México, conforme a la ley
+                        aplicable.
                     </p>
                 </section>
 
                 <section>
                     <h3 class="text-lg font-bold text-primary mb-3">15. Enmiendas</h3>
                     <p class="leading-relaxed">
-                        Nos reservamos el derecho de modificar estos términos en cualquier momento. 
-                        Los cambios serán efectivos cuando se publiquen. El uso continuado de nuestros servicios 
+                        Nos reservamos el derecho de modificar estos términos en cualquier momento.
+                        Los cambios serán efectivos cuando se publiquen. El uso continuado de nuestros servicios
                         constituye aceptación de los términos modificados.
                     </p>
                 </section>
@@ -1170,7 +1283,8 @@
 
             <!-- Modal Footer -->
             <div class="flex justify-end gap-4 p-6 md:p-8 border-t border-gold/20 bg-bone/50">
-                <label for="terms-modal-toggle" class="px-6 py-2.5 rounded-full font-bold uppercase tracking-widest text-sm cursor-pointer border-2 border-primary text-primary hover:bg-primary/5 transition-colors">
+                <label for="terms-modal-toggle"
+                    class="px-6 py-2.5 rounded-full font-bold uppercase tracking-widest text-sm cursor-pointer border-2 border-primary text-primary hover:bg-primary/5 transition-colors">
                     Cerrar
                 </label>
             </div>
@@ -1180,12 +1294,28 @@
     <!-- ==================== WHATSAPP FLOATING BUTTON ==================== -->
     <a aria-label="WhatsApp" class="fixed bottom-8 right-8 z-[100] group flex items-center justify-center"
         href="https://wa.me/523318331833" rel="noopener noreferrer" target="_blank">
-        <div class="absolute inset-0 bg-gold rounded-full opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"> </div>
-        <div class="relative w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center border-2 border-gold/40 whatsapp-glow hover:scale-110 transition-all duration-300 shadow-2xl">
-            <svg class="w-8 h-8 fill-current" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path>
+        <div
+            class="absolute inset-0 bg-gold rounded-full opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300">
+        </div>
+        <div
+            class="relative w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center border-2 border-gold/40 whatsapp-glow hover:scale-110 transition-all duration-300 shadow-2xl">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232">
+                </path>
             </svg>
         </div>
     </a>
+
+    <!-- Mobile menu: close on link click -->
+    <script>
+        document.querySelectorAll('#mobile-menu a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                document.getElementById('mobile-menu-toggle').checked = false;
+            });
+        });
+    </script>
 </body>
+
 </html>
