@@ -28,13 +28,13 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#b15330", // Rich Terracotta
+                        "primary": "#8a3a19", // Rich Terracotta
                         "primary-muted": "#d9a38f", // Muted Terracotta
-                        "primary-dark": "#6b2f1a", // Deep Terracotta
+                        "primary-dark": "#8a3a19",
                         "latte": "#e8d5c4", // Warm Latte
                         "gold": "#d4af37",
-                        "bone": "#fcfaf7", // Content Bone
-                        "background-light": "#fcfaf7",
+                        "bone": "#f8f6f6", // Content Bone
+                        "background-light": "#f8f6f6",
                     },
                     fontFamily: {
                         "display": ["Cinzel", "serif"],
@@ -139,14 +139,12 @@
                                 href="#blog">
                                 Blog
                             </a>
-                            <a class="text-bone hover:text-gold transition-colors text-xs font-display font-semibold uppercase tracking-widest"
-                                href="#contacto">
-                                Contacto
-                            </a>
                         </nav>
                         <button
                             class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-gold text-primary-dark text-xs font-bold uppercase tracking-widest hover:bg-bone transition-all shadow-lg">
-                            <span>Agendar Cita</span>
+                            <a href="#contacto">
+                                <span>Agendar Cita</span>
+                            </a>
                         </button>
                     </div>
 
@@ -330,10 +328,10 @@
                                         <span class="material-symbols-outlined text-gold">school</span>
                                         <div>
                                             <h4 class="font-display font-bold text-white text-sm">
-                                                Gerontología
+                                                Licenciada en Gerontología
                                             </h4>
                                             <p class="font-montserrat-light text-xs text-bone/70">
-                                                Formación en Terapia Fisica y Estimulacion Cognitiva.
+                                                Formación integral en el proceso de envejecimiento biopsicosocial.
                                             </p>
                                         </div>
                                     </div>
@@ -342,10 +340,34 @@
                                         <span class="material-symbols-outlined text-gold">psychology</span>
                                         <div>
                                             <h4 class="font-display font-bold text-white text-sm">
-                                                Salud Mental
+                                                Especialista en Estimulación Cognitiva
                                             </h4>
                                             <p class="font-montserrat-light text-xs text-bone/70">
-                                                Especialista en estimulación.
+                                                Experta en técnicas para preservar y potenciar la salud mental.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
+                                        <span class="material-symbols-outlined text-gold">favorite</span>
+                                        <div>
+                                            <h4 class="font-display font-bold text-white text-sm">
+                                                Acompañamiento en el Duelo
+                                            </h4>
+                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                                Apoyo profesional y humano en procesos de pérdida y transición.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-start gap-4 p-5 bg-primary-dark/30 rounded-lg border-l-2 border-gold backdrop-blur-sm">
+                                        <span class="material-symbols-outlined text-gold">workspace_premium</span>
+                                        <div>
+                                            <h4 class="font-display font-bold text-white text-sm">
+                                                Atención Ética y Humana
+                                            </h4>
+                                            <p class="font-montserrat-light text-xs text-bone/70">
+                                                Compromiso absoluto con la dignidad y derechos del paciente.
                                             </p>
                                         </div>
                                     </div>
@@ -534,6 +556,23 @@
                                     </p>
                                 </div>
                             </details>
+                            <details class="group border-b border-gold/30 pb-4">
+                                <summary class="flex items-center justify-between cursor-pointer py-4">
+                                    <h3 class="font-display text-lg text-primary-dark font-bold pr-8">
+                                        ¿Cómo puedo agendar una valoración inicial?
+                                    </h3>
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined plus-icon">add</span>
+                                        <span class="material-symbols-outlined minus-icon">remove</span>
+                                    </div>
+                                </summary>
+                                <div class="pb-4">
+                                    <p class="font-montserrat-light text-slate-700 leading-relaxed">
+                                        Puedes agendar tu valoración a través de nuestro formulario de contacto, vía
+                                        WhatsApp con el botón flotante, o llamándonos directamente.
+                                    </p>
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </section>
@@ -701,21 +740,28 @@
                         <div class="flex items-center gap-3 text-gold">
                             <img src="./img/kalmar_logo_white.webp" alt="KalMar Logo" class="h-20 w-auto" />
                         </div>
+                        <h4
+                            class="font-display font-bold uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
+                            Sobre KalMar
+                        </h4>
                         <p class="text-bone/60 font-montserrat-light leading-relaxed text-sm">
                             Líderes en atención gerontológica integral. Dedicados a brindar servicios de salud de alta
-                            calidad con un enfoque humanista.
+                            calidad con un enfoque humanista para el adulto mayor y su familia en cada etapa.
                         </p>
                     </div>
                     <!-- Footer: Links -->
                     <div>
                         <h4
                             class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
-                            Enlaces
+                            Enlaces Rápidos
                         </h4>
                         <ul class="space-y-4 text-bone/60 font-montserrat-light text-sm">
                             <li><a class="hover:text-gold transition-colors" href="#">Inicio</a></li>
-                            <li><a class="hover:text-gold transition-colors" href="#servicios">Servicios</a></li>
-                            <li><a class="hover:text-gold transition-colors" href="#trayectoria">Sobre Mí</a></li>
+                            <li><a class="hover:text-gold transition-colors" href="#servicios">Nuestros Servicios</a>
+                            </li>
+                            <li><a class="hover:text-gold transition-colors" href="#trayectoria">Trayectoria de
+                                    Karla</a></li>
+                            <li><a class="hover:text-gold transition-colors" href="#blog">Artículos de Interés</a></li>
                             <li><a class="hover:text-gold transition-colors" href="#contacto">Contacto</a></li>
                         </ul>
                     </div>
@@ -723,17 +769,40 @@
                     <div>
                         <h4
                             class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
-                            Contacto</h4>
-                        <div class="space-y-4 text-sm font-montserrat-light">
-                            <!-- DIRECCION CONSULTORIO 
-                            <div class="flex items-start gap-4">
-                                <span class="material-symbols-outlined text-gold text-xl">location_on</span>
-                                <p class="text-bone/60">Av. de la Salud 123, Ciudad de México.</p>
+                            Contacto
+                        </h4>
+                        <div class="space-y-6 text-sm font-montserrat-light">
+                            <!-- DIRECCION CONSULTORIO
+                            <div class="flex items-start gap-4 group">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-start gap-4">
+                                        <span class="material-symbols-outlined text-gold mt-1">location_on</span>
+                                        <div class="text-bone/60 font-montserrat-light leading-relaxed">
+                                            <p class="text-white font-semibold mb-1">Visítanos</p>
+                                            Av. de la Salud 123, <br />
+                                            Colonia Los Olivos, <br />
+                                            Ciudad de México.
+                                        </div>
+                                    </div>
+                                    <a class="inline-flex items-center gap-2 bg-primary-dark/50 hover:bg-gold hover:text-primary-dark px-4 py-2 rounded-lg transition-all text-xs uppercase tracking-widest font-bold text-gold"
+                                        href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+                                        <span class="material-symbols-outlined text-sm">map</span> Ver en Google Maps
+                                    </a>
+                                </div>
                             </div> -->
-                            <div class="flex items-center gap-4">
-                                <span class="material-symbols-outlined text-gold text-xl">phone_iphone</span>
-                                <a class="text-bone/80 hover:text-gold transition-all" href="tel:+523318331833">
+                            <div class="flex items-center gap-4 group">
+                                <span class="material-symbols-outlined text-gold">phone_iphone</span>
+                                <a class="text-bone/80 font-bold text-lg hover:text-gold transition-all"
+                                    href="tel:+523318331833">
                                     +52 33 18 33 18 33
+                                </a>
+                            </div>
+                            <!-- EMAIL CONTACTO -->
+                            <div class="flex items-center gap-4 group">
+                                <span class="material-symbols-outlined text-gold">mail</span>
+                                <a class="text-bone/60 font-montserrat-light hover:text-gold transition-colors"
+                                    href="mailto:kalmaratenciongerontologica@gmail.com">
+                                    kalmaratenciongerontologica@gmail.com
                                 </a>
                             </div>
                         </div>
@@ -742,34 +811,53 @@
                     <div>
                         <h4
                             class="font-display font-bold mb-8 uppercase tracking-widest text-gold text-xs border-b border-gold/20 pb-2">
-                            Síguenos
+                            Redes Sociales
                         </h4>
+                        <p class="text-bone/60 font-montserrat-light mb-6 text-sm">Síguenos para consejos sobre el
+                            cuidado del adulto mayor y noticias de KalMar.</p>
                         <div class="flex gap-4">
                             <a aria-label="Facebook"
-                                class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all"
+                                class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all shadow-lg hover:shadow-gold/20"
                                 href="#" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
                                     </path>
                                 </svg>
                             </a>
                             <a aria-label="Instagram"
-                                class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all"
+                                class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all shadow-lg hover:shadow-gold/20"
                                 href="#" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0 3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z">
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a aria-label="LinkedIn"
+                                class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-primary-dark transition-all shadow-lg hover:shadow-gold/20"
+                                href="#" target="_blank" rel="noopener noreferrer">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
                                     </path>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="max-w-[1280px] mx-auto px-6 pt-8 border-t border-white/5 text-center">
+                <div
+                    class="max-w-[1280px] mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p class="text-bone/40 text-[10px] font-montserrat-light tracking-widest uppercase">
                         © 2026 KalMar Atencion Gerontologica. Todos los derechos reservados.
                     </p>
+                    <div class="flex gap-6 text-[10px] text-bone/40 uppercase tracking-widest font-montserrat-light">
+                        <a class="hover:text-gold transition-colors" href="#">Política de Privacidad</a>
+                        <a class="hover:text-gold transition-colors" href="#">Términos de Servicio</a>
+                    </div>
                 </div>
             </footer>
 
