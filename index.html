@@ -96,6 +96,14 @@
         #subscription-modal-toggle:checked ~ #subscription-modal {
             display: flex;
         }
+        
+        #privacy-modal-toggle:checked ~ #privacy-modal {
+            display: flex;
+        }
+        
+        #terms-modal-toggle:checked ~ #terms-modal {
+            display: flex;
+        }
     </style>
 </head>
 
@@ -806,17 +814,359 @@
                         © 2026 KalMar Atencion Gerontologica. Todos los derechos reservados.
                     </p>
                     <div class="flex gap-6 text-[10px] text-bone/40 uppercase tracking-widest font-montserrat-light">
-                        <a class="hover:text-gold transition-colors" 
-                            href="#">
+                        <label class="hover:text-gold transition-colors cursor-pointer" 
+                            for="privacy-modal-toggle">
                             Política de Privacidad
-                        </a>
-                        <a class="hover:text-gold transition-colors" 
-                            href="#">
+                        </label>
+                        <label class="hover:text-gold transition-colors cursor-pointer" 
+                            for="terms-modal-toggle">
                             Términos de Servicio
-                        </a>
+                        </label>
                     </div>
                 </div>
             </footer>
+        </div>
+    </div>
+
+    <!-- ==================== PRIVACY POLICY MODAL ==================== -->
+    <input class="hidden peer" id="privacy-modal-toggle" type="checkbox" />
+    <div id="privacy-modal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-bone rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between p-6 md:p-8 border-b border-gold/20">
+                <h2 class="text-2xl md:text-3xl font-display font-bold text-primary">
+                    Política de Privacidad
+                </h2>
+                <label for="privacy-modal-toggle" class="cursor-pointer text-primary hover:text-primary-dark transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </label>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="overflow-y-auto flex-1 p-6 md:p-8 text-slate-700 font-montserrat-light space-y-6">
+                
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">1. Introducción</h3>
+                    <p class="leading-relaxed">
+                        KalMar Atención Gerontológica ("Compañía", "nosotros" o "nuestro") respeta la privacidad de sus usuarios 
+                        ("usuario" o "usted"). Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y 
+                        protegemos información en relación con nuestro sitio web y servicios, de conformidad con la Ley Federal 
+                        de Protección de Datos Personales en Posesión de Sujetos Obligados (LFPDPSO).
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">2. Información que Recopilamos</h3>
+                    <p class="mb-3 leading-relaxed">Recopilamos información que usted nos proporciona voluntariamente, incluyendo:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li>Nombre completo y datos de contacto</li>
+                        <li>Correo electrónico y número telefónico</li>
+                        <li>Información sobre antecedentes de salud relevantes</li>
+                        <li>Información de la familia del paciente</li>
+                        <li>Mensajes y comunicaciones directas</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">3. Propósito del Tratamiento de Datos</h3>
+                    <p class="mb-3 leading-relaxed">Utilizamos la información recopilada para:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li>Proporcionar servicios de atención gerontológica especializada</li>
+                        <li>Contactarlo para agendar citas y consultas</li>
+                        <li>Responder a sus consultas y solicitudes</li>
+                        <li>Mejorar nuestros servicios y página web</li>
+                        <li>Enviar información sobre servicios relacionados (con consentimiento)</li>
+                        <li>Cumplir con obligaciones legales y regulatorias</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">4. Consentimiento</h3>
+                    <p class="leading-relaxed">
+                        Al proporcionar información personal a través de nuestro sitio web o formularios, usted otorga su 
+                        consentimiento expreso para que KalMar trate sus datos personales de acuerdo con esta política. 
+                        Puede retirar su consentimiento en cualquier momento contactándonos directamente.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">5. Seguridad de Datos</h3>
+                    <p class="leading-relaxed">
+                        Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger sus datos 
+                        personales contra acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, no podemos 
+                        garantizar la seguridad absoluta de la transmisión de datos por internet.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">6. Confidencialidad</h3>
+                    <p class="leading-relaxed">
+                        Toda información de salud y personal de nuestros pacientes es tratada bajo estricta confidencialidad 
+                        de conformidad con las normas éticas profesionales y la legislación sanitaria aplicable en México.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">7. Derechos del Titular de Datos</h3>
+                    <p class="mb-3 leading-relaxed">Conforme a la LFPDPSO, como titular de datos personales tiene derecho a:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li><strong>Acceso:</strong> Conocer qué datos personales tenemos sobre usted</li>
+                        <li><strong>Rectificación:</strong> Solicitar la corrección de datos inexactos</li>
+                        <li><strong>Cancelación:</strong> Solicitar la eliminación de sus datos</li>
+                        <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos en ciertos casos</li>
+                        <li><strong>Limitación:</strong> Limitar el uso de sus datos personales</li>
+                        <li><strong>Portabilidad:</strong> Recibir sus datos en formato estructurado</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">8. Cookies y Tecnologías de Rastreo</h3>
+                    <p class="leading-relaxed">
+                        Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar su experiencia. 
+                        Puede configurar su navegador para rechazar cookies, aunque esto puede afectar la funcionalidad del sitio.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">9. Terceros</h3>
+                    <p class="leading-relaxed">
+                        No compartimos sus datos personales con terceros sin su consentimiento, excepto cuando sea requerido 
+                        por ley o para propósitos directamente relacionados con nuestros servicios de salud.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">10. Cambios en la Política</h3>
+                    <p class="leading-relaxed">
+                        Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. 
+                        Los cambios serán efectivos cuando se publiquen en nuestro sitio web.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">11. Contacto</h3>
+                    <p class="leading-relaxed">
+                        Para ejercer sus derechos ARCO (Acceso, Rectificación, Cancelación u Oposición) o si tiene preguntas 
+                        sobre esta política, contáctenos:
+                    </p>
+                    <div class="mt-4 p-4 bg-white border-l-4 border-gold rounded">
+                        <p class="font-bold text-primary">KalMar Atención Gerontológica</p>
+                        <p class="text-sm">📧 Email: kalmaratenciongerontologica@gmail.com</p>
+                        <p class="text-sm">📱 Teléfono: +52 33 18 33 18 33</p>
+                        <p class="text-sm">Disponible para atender sus solicitudes en un plazo de 10 días hábiles.</p>
+                    </div>
+                </section>
+
+                <section class="pt-4 border-t border-gold/20">
+                    <p class="text-xs text-slate-500 italic">
+                        Última actualización: 13 de Marzo, 2026
+                    </p>
+                </section>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="flex justify-end gap-4 p-6 md:p-8 border-t border-gold/20 bg-bone/50">
+                <label for="privacy-modal-toggle" class="px-6 py-2.5 rounded-full font-bold uppercase tracking-widest text-sm cursor-pointer border-2 border-primary text-primary hover:bg-primary/5 transition-colors">
+                    Cerrar
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TERMS OF SERVICE MODAL ==================== -->
+    <input class="hidden peer" id="terms-modal-toggle" type="checkbox" />
+    <div id="terms-modal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-bone rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between p-6 md:p-8 border-b border-gold/20">
+                <h2 class="text-2xl md:text-3xl font-display font-bold text-primary">
+                    Términos de Servicio
+                </h2>
+                <label for="terms-modal-toggle" class="cursor-pointer text-primary hover:text-primary-dark transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </label>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="overflow-y-auto flex-1 p-6 md:p-8 text-slate-700 font-montserrat-light space-y-6">
+                
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">1. Aceptación de Términos</h3>
+                    <p class="leading-relaxed">
+                        Al acceder y utilizar este sitio web y los servicios de KalMar Atención Gerontológica, 
+                        usted acepta estar obligado por estos Términos de Servicio. Si no acepta alguno de estos términos, 
+                        le solicitamos que no utilice nuestros servicios.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">2. Descripción de Servicios</h3>
+                    <p class="mb-3 leading-relaxed">
+                        KalMar Atención Gerontológica ofrece servicios especializados de atención a adultos mayores, incluyendo:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li>Estimulación Cognitiva Neuropsicológica</li>
+                        <li>Terapia Física Especializada para Seniors</li>
+                        <li>Consejería Familiar y Apoyo Emocional</li>
+                        <li>Acompañamiento en procesos de transición y duelo</li>
+                        <li>Orientación profesional y asesoría personalizada</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">3. Elegibilidad</h3>
+                    <p class="leading-relaxed">
+                        Al utilizar nuestros servicios, usted declara que es mayor de edad o que cuenta con la autorización 
+                        de su representante legal. Si actúa en representación de un paciente, garantiza que tiene autoridad legal 
+                        para hacerlo.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">4. Uso Aceptable</h3>
+                    <p class="mb-3 leading-relaxed">Usted se compromete a:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li>Utilizar nuestros servicios de manera legal y ética</li>
+                        <li>No interferir con la provisión de nuestros servicios</li>
+                        <li>No transmitir contenido ofensivo, difamatorio o ilegal</li>
+                        <li>Proporcionar información veraz y completa</li>
+                        <li>Respetar la confidencialidad de otros pacientes</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">5. Limitaciones de Responsabilidad</h3>
+                    <p class="mb-3 leading-relaxed">
+                        <strong>Exención médica:</strong> Los servicios de KalMar son de carácter terapéutico y de apoyo. 
+                        No reemplazan la consulta médica profesional. Para emergencias médicas, contacte a los servicios de salud competentes.
+                    </p>
+                    <p class="leading-relaxed">
+                        KalMar no es responsable por: (a) interrupciones del servicio por causas ajenas a nuestro control; 
+                        (b) daños indirectos o incidentales; (c) cambios en el estado de salud del paciente que requieran intervención médica urgente.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">6. Propiedad Intelectual</h3>
+                    <p class="leading-relaxed">
+                        Todos los contenidos del sitio web, incluyendo textos, imágenes, logos, y diseño, 
+                        son propiedad de KalMar o están autorizados para su uso. No puede reproducir, distribuir o transmitir 
+                        contenido sin autorización expresa.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">7. Cancelación y Reembolsos</h3>
+                    <p class="mb-3 leading-relaxed">
+                        La política de cancelación de citas se establece según lo acordado en la consulta inicial:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li>Cancelación con 24 horas de anticipación: Sin costo</li>
+                        <li>Cancelación con menos de 24 horas: Se aplicará cargo del 50% de la consulta</li>
+                        <li>No presentación (No-show): Se aplicará cargo del 100% de la consulta</li>
+                    </ul>
+                    <p class="mt-3 leading-relaxed">
+                        Los reembolsos serán procesados dentro de 10 días hábiles.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">8. Confidencialidad y Registro Médico</h3>
+                    <p class="leading-relaxed">
+                        Todos los registros y comunicaciones médicas serán mantenidos con estricta confidencialidad 
+                        de acuerdo con la ley sanitaria mexicana. Solo personal autorizado tendrá acceso a esta información. 
+                        El paciente tiene derecho a solicitar acceso a su expediente en cualquier momento.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">9. Modificaciones de Servicios</h3>
+                    <p class="leading-relaxed">
+                        Nos reservamos el derecho de modificar, suspender o descontinuar servicios en cualquier momento, 
+                        con notificación previa. Los cambios materiales serán comunicados con al menos 30 días de anticipación.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">10. Suspensión de Servicios</h3>
+                    <p class="leading-relaxed">
+                        KalMar puede suspender o terminar el acceso a servicios si: (a) hay incumplimiento de estos términos; 
+                        (b) se detecta actividad fraudulenta; (c) no se realizan pagos acordados; (d) hay abuso de los servicios.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">11. Acuerdos de Pago</h3>
+                    <p class="leading-relaxed">
+                        Los precios de servicios son establecidos por KalMar y están sujetos a cambios. 
+                        Se notificará sobre cambios de precios con antecedencia. El incumplimiento en el pago puede resultar 
+                        en la suspensión de servicios.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">12. Responsabilidad del Paciente</h3>
+                    <p class="mb-3 leading-relaxed">
+                        El paciente o su representante es responsable de:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li>Proporcionar información médica precisa y completa</li>
+                        <li>Informar sobre cambios en su estado de salud</li>
+                        <li>Seguir las recomendaciones y protocolos establecidos</li>
+                        <li>Notificar sobre reacciones adversas o complicaciones</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">13. Limitaciones Legales</h3>
+                    <p class="leading-relaxed">
+                        De conformidad con la ley mexicana, en la máxima medida permitida, KalMar no será responsable 
+                        por daños especiales, incidentales, indirectos o punitivos, incluso si se le ha informado de la posibilidad de tales daños.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">14. Ley Aplicable y Jurisdicción</h3>
+                    <p class="leading-relaxed">
+                        Estos Términos de Servicio se regirán conforme a la legislación de los Estados Unidos Mexicanos. 
+                        Cualquier disputa será resuelta en los tribunales competentes de México, conforme a la ley aplicable.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">15. Enmiendas</h3>
+                    <p class="leading-relaxed">
+                        Nos reservamos el derecho de modificar estos términos en cualquier momento. 
+                        Los cambios serán efectivos cuando se publiquen. El uso continuado de nuestros servicios 
+                        constituye aceptación de los términos modificados.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold text-primary mb-3">16. Contacto</h3>
+                    <p class="leading-relaxed">
+                        Para preguntas o preocupaciones sobre estos Términos de Servicio, contáctenos:
+                    </p>
+                    <div class="mt-4 p-4 bg-white border-l-4 border-gold rounded">
+                        <p class="font-bold text-primary">KalMar Atención Gerontológica</p>
+                        <p class="text-sm">📧 Email: kalmaratenciongerontologica@gmail.com</p>
+                        <p class="text-sm">📱 Teléfono: +52 33 18 33 18 33</p>
+                    </div>
+                </section>
+
+                <section class="pt-4 border-t border-gold/20">
+                    <p class="text-xs text-slate-500 italic">
+                        Última actualización: 13 de Marzo, 2026
+                    </p>
+                </section>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="flex justify-end gap-4 p-6 md:p-8 border-t border-gold/20 bg-bone/50">
+                <label for="terms-modal-toggle" class="px-6 py-2.5 rounded-full font-bold uppercase tracking-widest text-sm cursor-pointer border-2 border-primary text-primary hover:bg-primary/5 transition-colors">
+                    Cerrar
+                </label>
+            </div>
         </div>
     </div>
 
